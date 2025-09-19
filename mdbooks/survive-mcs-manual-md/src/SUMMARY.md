@@ -1,23 +1,23 @@
 # Summary
 
-- [前言](./preface.md)
+- [前言](./chpt01-preface.md)
 
 ---
 
-- [0.欢迎来到MCS](./chpt00.md)
-- [1. 学术规则介绍](./chpt01.md)
-- [2. 学习方法与心得](./chpt02.md)
+- [欢迎来到MCS](./chpt02-welcome.md)
+- [学术规则介绍](./chpt03-regulation.md)
+- [学习方法与心得](./chpt04-experience.md)
 
 ---
 
-- [3. 数学课程简介]()
-    - [3.1. 数学学习资源]()
-    - [3.2. 数学课程锐评]()
-- [4. 计算机课程简介]()
-    - [4.1. 计算机学习资源]()
-    - [4.2. 计算机课程锐评]()
+- [数学课程简介](./chpt05-math-courses.md)
+    - [数学学习资源](./chpt05.01-math-res.md)
+    - [数学课程锐评](./chpt05.02-math-remarks.md)
+- [计算机课程简介](./chpt06-cs-courses.md)
+    - [计算机学习资源](./chpt06.01-cs-res.md)
+    - [计算机课程锐评](./chpt06.02-cs-remarks.md)
 
 ---
 
-- [5. 职业发展](./chpt05.md)
+- [职业发展](./chpt07.md)
 

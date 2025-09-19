@@ -1,4 +1,4 @@
-# 前言
+# 1. 前言
 
 \<Survive-MCS-Manual\>（MCS生存手册）由2025年暑期PT团队创建，参考了知名的[上海交大生存手册](https://survivesjtu.gitbook.io/survivesjtumanual)，内容上大致上涵盖过去几届预备学期的组会内容，包括学术规则介绍，学习方法与资源分享，以及对数学与计算机课程内容与结构的一些大致解析。
 
