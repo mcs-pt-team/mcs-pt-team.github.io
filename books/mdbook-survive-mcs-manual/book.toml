@@ -5,5 +5,5 @@ src = "src"
 title = "survive-mcs-manual"
 [build]
 build-dir = "../../docs/survive-mcs-manual"
-[output.html]
-additional-css = ["theme/vue.css"]
+#[output.html]
+#additional-css = ["theme/vue.css"]
