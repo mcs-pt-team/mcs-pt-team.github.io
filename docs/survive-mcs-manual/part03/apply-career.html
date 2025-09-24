@@ -1,0 +1,838 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'><style type='text/css'>html {overflow-x: initial !important;}</style>
+<style type='text/css'  id="style-mermaid">:root { --mermaid-theme: default; --mermaid-sequence-numbers: off; --mermaid-flowchart-curve: linear; --mermaid--gantt-left-padding: 75; --sequence-theme: simple; }
+.privacy { display: none; }
+
+</style>
+<style type='text/css'  id="style-base">:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; --title-bar-height: 20px; }
+.mac-os-11 { --title-bar-height: 28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, "Segoe UI Emoji", "SF Pro", sans-serif; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, h4, h5 { white-space: pre-wrap; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.428571; overflow-x: hidden; background: inherit; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p *, #write.first-line-indent svg * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font-style: inherit; font-variant-caps: inherit; font-weight: inherit; font-width: inherit; font-size: inherit; line-height: inherit; font-family: inherit; font-size-adjust: inherit; font-kerning: inherit; font-variant-alternates: inherit; font-variant-ligatures: inherit; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-variant-position: inherit; font-variant-emoji: inherit; font-feature-settings: inherit; font-optical-sizing: inherit; font-variation-settings: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; position: relative; }
+#write svg h1, #write svg h2, #write svg h3, #write svg h4, #write svg h5, #write svg h6, #write svg p { position: static; white-space: nowrap; overflow: visible; }
+foreignObject { overflow: visible; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+li p { orphans: 1; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+thead, tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right-width: 0px; border-right-style: none; border-right-color: currentcolor; background-color: inherit; }
+.CodeMirror-linenumber { -webkit-user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+svg { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; border-color: transparent !important; padding-top: 0px !important; padding-bottom: 0px !important; }
+  .typora-export * { print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  #write > p:nth-child(1) { margin-top: 0px; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+  figure { overflow-x: visible; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: medium; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.reversefootnote { font-family: ui-monospace, sans-serif; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: medium !important; border-style: none !important; border-color: currentcolor !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom-width: 0px; border-bottom-style: none; border-bottom-color: currentcolor; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: medium; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.mermaid-svg { margin: auto; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex: 2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; overflow-wrap: anywhere; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.428571rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left-width: 28px; border-left-style: solid; border-left-color: transparent; border-right-width: 28px; border-right-style: solid; border-right-color: transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right-width: 8px; border-right-style: solid; border-right-color: transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+mjx-container { break-inside: avoid; }
+.md-alert.md-alert-note { border-left-color: rgb(9, 105, 218); }
+.md-alert.md-alert-important { border-left-color: rgb(130, 80, 223); }
+.md-alert.md-alert-warning { border-left-color: rgb(154, 103, 0); }
+.md-alert.md-alert-tip { border-left-color: rgb(31, 136, 61); }
+.md-alert.md-alert-caution { border-left-color: rgb(207, 34, 46); }
+.md-alert { padding: 0px 1em; margin-bottom: 16px; color: inherit; border-left-width: 0.25em; border-left-style: solid; border-left-color: rgb(0, 0, 0); }
+.md-alert-text-note { color: rgb(9, 105, 218); }
+.md-alert-text-important { color: rgb(130, 80, 223); }
+.md-alert-text-warning { color: rgb(154, 103, 0); }
+.md-alert-text-tip { color: rgb(31, 136, 61); }
+.md-alert-text-caution { color: rgb(207, 34, 46); }
+.md-alert-text { font-size: 0.9rem; font-weight: 700; }
+.md-alert-text svg { fill: currentcolor; position: relative; top: 0.125em; margin-right: 1ch; overflow: visible; }
+.md-alert-text-container::after { content: attr(data-text); text-transform: capitalize; pointer-events: none; margin-right: 1ch; }
+
+</style>
+<style type='text/css'  id="style-codemirror">.CodeMirror { height: auto; }
+.CodeMirror.cm-s-inner { background: inherit; }
+.CodeMirror-scroll { overflow: auto hidden; z-index: 3; }
+.CodeMirror-gutter-filler, .CodeMirror-scrollbar-filler { background-color: rgb(255, 255, 255); }
+.CodeMirror-gutters { border-right-width: 1px; border-right-style: solid; border-right-color: rgb(221, 221, 221); background: inherit; white-space: nowrap; }
+.CodeMirror-linenumber { padding: 0px 3px 0px 5px; text-align: right; color: rgb(153, 153, 153); }
+.cm-s-inner .cm-keyword { color: rgb(119, 0, 136); }
+.cm-s-inner .cm-atom, .cm-s-inner.cm-atom { color: rgb(34, 17, 153); }
+.cm-s-inner .cm-number { color: rgb(17, 102, 68); }
+.cm-s-inner .cm-def { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-variable { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-variable-2 { color: rgb(0, 85, 170); }
+.cm-s-inner .cm-variable-3 { color: rgb(0, 136, 85); }
+.cm-s-inner .cm-string { color: rgb(170, 17, 17); }
+.cm-s-inner .cm-property { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-operator { color: rgb(152, 26, 26); }
+.cm-s-inner .cm-comment, .cm-s-inner.cm-comment { color: rgb(170, 85, 0); }
+.cm-s-inner .cm-string-2 { color: rgb(255, 85, 0); }
+.cm-s-inner .cm-meta { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-qualifier { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-builtin { color: rgb(51, 0, 170); }
+.cm-s-inner .cm-bracket { color: rgb(153, 153, 119); }
+.cm-s-inner .cm-tag { color: rgb(17, 119, 0); }
+.cm-s-inner .cm-attribute { color: rgb(0, 0, 204); }
+.cm-s-inner .cm-header, .cm-s-inner.cm-header { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-quote, .cm-s-inner.cm-quote { color: rgb(0, 153, 0); }
+.cm-s-inner .cm-hr, .cm-s-inner.cm-hr { color: rgb(153, 153, 153); }
+.cm-s-inner .cm-link, .cm-s-inner.cm-link { color: rgb(0, 0, 204); }
+.cm-negative { color: rgb(221, 68, 68); }
+.cm-positive { color: rgb(34, 153, 34); }
+.cm-header, .cm-strong { font-weight: 700; }
+.cm-del { text-decoration: line-through; }
+.cm-em { font-style: italic; }
+.cm-link { text-decoration: underline; }
+.cm-error { color: red; }
+.cm-invalidchar { color: red; }
+.cm-constant { color: rgb(38, 139, 210); }
+.cm-defined { color: rgb(181, 137, 0); }
+div.CodeMirror span.CodeMirror-matchingbracket { color: rgb(0, 255, 0); }
+div.CodeMirror span.CodeMirror-nonmatchingbracket { color: rgb(255, 34, 34); }
+.cm-s-inner .CodeMirror-activeline-background { background: inherit; }
+.CodeMirror { position: relative; overflow: hidden; }
+.CodeMirror-scroll { height: 100%; outline: 0px; position: relative; box-sizing: content-box; background: inherit; }
+.CodeMirror-sizer { position: relative; }
+.CodeMirror-gutter-filler, .CodeMirror-hscrollbar, .CodeMirror-scrollbar-filler, .CodeMirror-vscrollbar { position: absolute; z-index: 6; display: none; outline: 0px; }
+.CodeMirror-vscrollbar { right: 0px; top: 0px; overflow: hidden; }
+.CodeMirror-hscrollbar { bottom: 0px; left: 0px; overflow: auto hidden; }
+.CodeMirror-scrollbar-filler { right: 0px; bottom: 0px; }
+.CodeMirror-gutter-filler { left: 0px; bottom: 0px; }
+.CodeMirror-gutters { position: absolute; left: 0px; top: 0px; padding-bottom: 10px; z-index: 3; overflow-y: hidden; }
+.CodeMirror-gutter { white-space: normal; height: 100%; box-sizing: content-box; padding-bottom: 30px; margin-bottom: -32px; display: inline-block; }
+.CodeMirror-gutter-wrapper { position: absolute; z-index: 4; background: 0px 0px !important; border: medium !important; }
+.CodeMirror-gutter-background { position: absolute; top: 0px; bottom: 0px; z-index: 4; }
+.CodeMirror-gutter-elt { position: absolute; cursor: default; z-index: 4; }
+.CodeMirror-lines { cursor: text; }
+.CodeMirror pre { border-radius: 0px; border-width: 0px; background: 0px 0px; font-family: inherit; font-size: inherit; margin: 0px; white-space: pre; overflow-wrap: normal; color: inherit; z-index: 2; position: relative; overflow: visible; }
+.CodeMirror-wrap pre { overflow-wrap: break-word; white-space: pre-wrap; word-break: normal; }
+.CodeMirror-code pre { border-right-width: 30px; border-right-style: solid; border-right-color: transparent; width: fit-content; }
+.CodeMirror-wrap .CodeMirror-code pre { border-right-width: medium; border-right-style: none; border-right-color: currentcolor; width: auto; }
+.CodeMirror-linebackground { position: absolute; inset: 0px; z-index: 0; }
+.CodeMirror-linewidget { position: relative; z-index: 2; overflow: auto; }
+.CodeMirror-wrap .CodeMirror-scroll { overflow-x: hidden; }
+.CodeMirror-measure { position: absolute; width: 100%; height: 0px; overflow: hidden; visibility: hidden; }
+.CodeMirror-measure pre { position: static; }
+.CodeMirror div.CodeMirror-cursor { position: absolute; visibility: hidden; border-right-width: medium; border-right-style: none; border-right-color: currentcolor; width: 0px; }
+.CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+.CodeMirror-focused div.CodeMirror-cursor { visibility: inherit; }
+.cm-searching { background: rgba(255, 255, 0, 0.4); }
+span.cm-underlined { text-decoration: underline; }
+span.cm-strikethrough { text-decoration: line-through; }
+.cm-tw-syntaxerror { color: rgb(255, 255, 255); background-color: rgb(153, 0, 0); }
+.cm-tw-deleted { text-decoration: line-through; }
+.cm-tw-header5 { font-weight: 700; }
+.cm-tw-listitem:first-child { padding-left: 10px; }
+.cm-tw-box { border-style: solid; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-color: inherit; border-top-width: 0px !important; }
+.cm-tw-underline { text-decoration: underline; }
+@media print {
+  .CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+}
+
+</style>
+<style type='text/css'  id="style-theme_css">/* cyrillic-ext */
+/* cyrillic */
+/* greek-ext */
+/* greek */
+/* vietnamese */
+/* latin-ext */
+/* latin */
+/* cyrillic-ext */
+/* cyrillic */
+/* greek-ext */
+/* greek */
+/* vietnamese */
+/* latin-ext */
+/* latin */
+/* cyrillic-ext */
+/* cyrillic */
+/* greek-ext */
+/* greek */
+/* vietnamese */
+/* latin-ext */
+/* latin */
+/* cyrillic-ext */
+/* cyrillic */
+/* greek-ext */
+/* greek */
+/* vietnamese */
+/* latin-ext */
+/* latin */
+@font-face {
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 600;
+    src: local('Source Sans Pro SemiBold'), local('SourceSansPro-SemiBold'), url('file:///Users/shawnkuo/Library/Application%20Support/abnerworks.Typora/themes/vue/6xKydSBYKcSV-LCoeQqfX1RYOo3i54rwlxdu.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}@import '';
+
+:root {
+    --side-bar-bg-color: #fff;
+    --control-text-color: #777;
+    --font-sans-serif: 'Ubuntu', 'Source Sans Pro', sans-serif !important;
+    --font-monospace: 'Fira Code', 'Roboto Mono', monospace !important;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: var(--font-sans-serif);
+    color: #34495e;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.6rem;
+    letter-spacing: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+#write {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 20px 30px 100px;
+}
+
+#write p {
+    line-height: 1.6rem;
+    word-spacing: .05rem;
+}
+
+#write ol li {
+    padding-left: 0.5rem;
+}
+
+#write > ul:first-child,
+#write > ol:first-child {
+    margin-top: 30px;
+}
+
+body > *:first-child {
+    margin-top: 0 !important;
+}
+
+body > *:last-child {
+    margin-bottom: 0 !important;
+}
+
+a {
+    color: #42b983;
+    font-weight: 600;
+    padding: 0 2px;
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+
+h1 tt,
+h1 code {
+    font-size: inherit !important;
+}
+
+h2 tt,
+h2 code {
+    font-size: inherit !important;
+}
+
+h3 tt,
+h3 code {
+    font-size: inherit !important;
+}
+
+h4 tt,
+h4 code {
+    font-size: inherit !important;
+}
+
+h5 tt,
+h5 code {
+    font-size: inherit !important;
+}
+
+h6 tt,
+h6 code {
+    font-size: inherit !important;
+}
+
+h2 a,
+h3 a {
+    color: #34495e;
+}
+
+h1 {
+    padding-bottom: .4rem;
+    font-size: 2.2rem;
+    line-height: 1.3;
+}
+
+h2 {
+    font-size: 1.75rem;
+    line-height: 1.225;
+    margin: 35px 0 15px;
+    padding-bottom: 0.5em;
+    border-bottom: 1px solid #ddd;
+}
+
+h3 {
+    font-size: 1.4rem;
+    line-height: 1.43;
+    margin: 20px 0 7px;
+}
+
+h4 {
+    font-size: 1.2rem;
+}
+
+h5 {
+    font-size: 1rem;
+}
+
+h6 {
+    font-size: 1rem;
+    color: #777;
+}
+
+p,
+blockquote,
+ul,
+ol,
+dl,
+table {
+    margin: 0.8em 0;
+}
+
+li > ol,
+li > ul {
+    margin: 0 0;
+}
+
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+body > h2:first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+body > h1:first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+body > h3:first-child,
+body > h4:first-child,
+body > h5:first-child,
+body > h6:first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+a:first-child h1,
+a:first-child h2,
+a:first-child h3,
+a:first-child h4,
+a:first-child h5,
+a:first-child h6 {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+h1 p,
+h2 p,
+h3 p,
+h4 p,
+h5 p,
+h6 p {
+    margin-top: 0;
+}
+
+li p.first {
+    display: inline-block;
+}
+
+ul,
+ol {
+    padding-left: 30px;
+}
+
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+
+blockquote {
+    border-left: 4px solid #42b983;
+    padding: 10px 15px;
+    color: #777;
+    background-color: rgba(66, 185, 131, .1);
+}
+
+table {
+    padding: 0;
+    word-break: initial;
+}
+
+table tr {
+    border-top: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+
+table tr:nth-child(2n),
+thead {
+    background-color: #fafafa;
+}
+
+table tr th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    text-align: left;
+    margin: 0;
+    padding: 6px 13px;
+}
+
+table tr td {
+    border: 1px solid #dfe2e5;
+    text-align: left;
+    margin: 0;
+    padding: 6px 13px;
+}
+
+table tr th:first-child,
+table tr td:first-child {
+    margin-top: 0;
+}
+
+table tr th:last-child,
+table tr td:last-child {
+    margin-bottom: 0;
+}
+
+#write strong {
+    padding: 0 1px;
+}
+
+#write em {
+    padding: 0 5px 0 2px;
+}
+
+#write table thead th {
+    background-color: #f2f2f2;
+}
+
+#write .CodeMirror-gutters {
+    border-right: none;
+}
+
+#write .md-fences {
+    border: 1px solid #F4F4F4;
+    -webkit-font-smoothing: initial;
+    margin: 0.8rem 0 !important;
+    padding: 0.3rem 0 !important;
+    line-height: 1.43rem;
+    background-color: #F8F8F8 !important;
+    border-radius: 2px;
+    font-family: var(--font-monospace);
+    font-size: 0.85rem;
+    word-wrap: normal;
+}
+
+#write .CodeMirror-wrap .CodeMirror-code pre {
+    padding-left: 12px;
+}
+
+#write code, tt {
+    padding: 2px 4px;
+    border-radius: 2px;
+    font-family: var(--font-monospace);
+    font-size: 0.92rem;
+    color: #e96900;
+    background-color: #f8f8f8;
+}
+
+tt {
+    margin: 0 2px;
+}
+
+#write .md-footnote {
+    background-color: #f8f8f8;
+    color: #e96900;
+}
+
+/* heighlight. */
+#write mark {
+    background-color: #EBFFEB;
+    border-radius: 2px;
+    padding: 2px 4px;
+    margin: 0 2px;
+    color: #222;
+    font-weight: 500;
+}
+
+#write del {
+    padding: 1px 2px;
+}
+
+.cm-s-inner .cm-link,
+.cm-s-inner.cm-link {
+    color: #22a2c9;
+}
+
+.cm-s-inner .cm-string {
+    color: #22a2c9;
+}
+
+.md-task-list-item > input {
+    margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+
+    pre {
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+    background-color: #f8f8f8;
+}
+
+.md-diagram-panel {
+    position: static !important;
+}
+
+#write pre.md-meta-block {
+    padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block > .code-tooltip {
+    bottom: .375rem;
+}
+
+#write > h3.md-focus:before {
+    left: -1.5625rem;
+    top: .375rem;
+}
+
+#write > h4.md-focus:before {
+    left: -1.5625rem;
+    top: .285714286rem;
+}
+
+#write > h5.md-focus:before {
+    left: -1.5625rem;
+    top: .285714286rem;
+}
+
+#write > h6.md-focus:before {
+    left: -1.5625rem;
+    top: .285714286rem;
+}
+
+.md-image > .md-meta {
+    border-radius: 3px;
+    font-family: var(--font-monospace);
+    padding: 2px 0 0 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: inherit;
+}
+
+.md-toc {
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+#md-notification:before {
+    top: 10px;
+}
+
+/** focus mode */
+
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header,
+.context-menu,
+.megamenu-content,
+footer {
+    font-family: var(--font-sans-serif);
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state {
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+.html-for-mac .context-menu {
+    --item-hover-bg-color: #E6F0FE;
+}
+</style>
+<style type='text/css'  id="style-lp">ol, ul {padding-left: 40px}</style>
+<style type='text/css'  id="style-mac-print"> @media print { @page {margin: 0 0 0 0;} body.typora-export {padding-left: 0; padding-right: 0;} #write {padding:0;}}</style>
+
+<title>apply-career</title>
+</head>
+<body class='typora-export typora-export-show-outline typora-export-no-collapse-outline'><div class='typora-export-content'>
+<div class="typora-export-sidebar"><div class="outline-content"><li class="outline-item-wrapper outline-h1"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#-申研与职业发展">§ 申研与职业发展</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#1-几大排名侧重点">1. 几大排名侧重点</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#2-城市--就业">2. 城市 &amp; 就业</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#3-数学系就业方向与课程选择">3. 数学系就业方向与课程选择</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#3-计算机申研选校专业">3. 计算机申研选校+专业</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#1-cs强校及分布">(1) CS强校及分布</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#2-为什么大多数同学选择美国">(2) 为什么大多数同学选择美国</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#3-cs申研国家地区选择">(3) CS申研国家地区选择</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#4-美国学校cs大概排名">(4) 美国学校CS大概排名</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#5-美国常见硕士项目">(5) 美国常见硕士项目</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#6-硕士难度总结">(6) 硕士难度总结</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#7-美国博士">(7) 美国博士</a></div><ul class="outline-children"></ul></li></ul></li></ul></li></div></div><div id='write'  class=''><h1 id='-申研与职业发展'><span>§ 申研与职业发展</span></h1><h2 id='1-几大排名侧重点'><span>1. 几大排名侧重点</span></h2><figure class='table-figure'><table><thead><tr><th style='text-align:center;' ><span>排名</span></th><th style='text-align:left;' ><span>特点</span></th></tr></thead><tbody><tr><td style='text-align:center;' ><span>QS</span></td><td style='text-align:left;' ><span>QS世界大学排名的主观性指标所占比重大，学术水平和雇主评价是关键指标，更适宜关注学成后就业能力的同学。</span></td></tr><tr><td style='text-align:center;' ><span>THE</span></td><td style='text-align:left;' ><span>THE作为一个较全面的排名，评分标准更细致，既关注大学科研实力，也关注学校声誉，还针对于机构收入等指标有所涉及。</span></td></tr><tr><td style='text-align:center;' ><span>U.S.News</span></td><td style='text-align:left;' ><span>U.S.News关注科研，学术影响力权重巨大。学术辐射力的权重，也是四个排名中最大的。</span></td></tr><tr><td style='text-align:center;' ><span>ARWU</span></td><td style='text-align:left;' ><span>ARWU关注科研，学术影响力权重巨大，不过ARWU全部采用客观性指标，同时针对于文献数量更为关心，对文献质量关注较少。</span></td></tr></tbody></table></figure><div class="md-alert md-alert-tip tip"><p><span class='md-alert-text md-alert-text-tip'><svg viewBox="0 0 16 16" version="1.1" width="1em" height="1em" aria-hidden="true"><path d="M8 1.5c-2.363 0-4 1.69-4 3.75 0 .984.424 1.625.984 2.304l.214.253c.223.264.47.556.673.848.284.411.537.896.621 1.49a.75.75 0 0 1-1.484.211c-.04-.282-.163-.547-.37-.847a8.456 8.456 0 0 0-.542-.68c-.084-.1-.173-.205-.268-.32C3.201 7.75 2.5 6.766 2.5 5.25 2.5 2.31 4.863 0 8 0s5.5 2.31 5.5 5.25c0 1.516-.701 2.5-1.328 3.259-.095.115-.184.22-.268.319-.207.245-.383.453-.541.681-.208.3-.33.565-.37.847a.751.751 0 0 1-1.485-.212c.084-.593.337-1.078.621-1.489.203-.292.45-.584.673-.848.075-.088.147-.173.213-.253.561-.679.985-1.32.985-2.304 0-2.06-1.637-3.75-4-3.75ZM5.75 12h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1 0-1.5ZM6 15.25a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 0 1.5h-2.5a.75.75 0 0 1-.75-.75Z"></path></svg>Tip</span><br></p><p><span>没有一个排名是完美的，QS饱受争议、US news不了解美国以外学校、上海软科受众太窄。</span></p><p><span>一般要结合多个排名具体分析，不同地区看不同排名，英联邦看QS、美国看US news美国国内大学排名。</span></p></div><p>&nbsp;</p><h2 id='2-城市--就业'><span>2. 城市 &amp; 就业</span></h2><ol start='' ><li><p><strong><span>英联邦国家</span></strong><span>一般回国工作较多， 特别是香港、新加坡高校，在广州、深圳认可度较高。</span></p></li><li><p><strong><span>美国高校</span></strong><span>的优点 就是有可能留美工作，毕竟花了那么多钱，不尝试一下就亏了。</span></p></li><li><p><span>对于</span><strong><span>计算机专业</span></strong><span>来说，想找实习 &amp; 工作就必须到大城市，比如：洛杉矶、西雅图、 纽约、波士顿。</span></p></li><li><p><span>如果想要</span><strong><span>读博</span></strong><span>的，硕士所在城市就没那么重要。相比于找实习，在校期间多做一些科研更重要。</span></p></li></ol><p>&nbsp;</p><h2 id='3-数学系就业方向与课程选择'><span>3. 数学系就业方向与课程选择</span></h2><div class="md-diagram-panel md-fences-adv-panel" lang="mermaid"><svg id="mermaidChart0" width="100%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="flowchart mermaid-svg" style="max-width: 1372.33984375px;" viewBox="-8 -8 1372.33984375 499" role="graphics-document document" aria-roledescription="flowchart-v2"><style>#mermaidChart0{font-family:sans-serif;font-size:16px;fill:#333;}@keyframes edge-animation-frame{from{stroke-dashoffset:0;}}@keyframes dash{to{stroke-dashoffset:0;}}#mermaidChart0 .edge-animation-slow{stroke-dasharray:9,5!important;stroke-dashoffset:900;animation:dash 50s linear infinite;stroke-linecap:round;}#mermaidChart0 .edge-animation-fast{stroke-dasharray:9,5!important;stroke-dashoffset:900;animation:dash 20s linear infinite;stroke-linecap:round;}#mermaidChart0 .error-icon{fill:#552222;}#mermaidChart0 .error-text{fill:#552222;stroke:#552222;}#mermaidChart0 .edge-thickness-normal{stroke-width:1px;}#mermaidChart0 .edge-thickness-thick{stroke-width:3.5px;}#mermaidChart0 .edge-pattern-solid{stroke-dasharray:0;}#mermaidChart0 .edge-thickness-invisible{stroke-width:0;fill:none;}#mermaidChart0 .edge-pattern-dashed{stroke-dasharray:3;}#mermaidChart0 .edge-pattern-dotted{stroke-dasharray:2;}#mermaidChart0 .marker{fill:#333333;stroke:#333333;}#mermaidChart0 .marker.cross{stroke:#333333;}#mermaidChart0 svg{font-family:sans-serif;font-size:16px;}#mermaidChart0 p{margin:0;}#mermaidChart0 .label{font-family:sans-serif;color:#333;}#mermaidChart0 .cluster-label text{fill:#333;}#mermaidChart0 .cluster-label span{color:#333;}#mermaidChart0 .cluster-label span p{background-color:transparent;}#mermaidChart0 .label text,#mermaidChart0 span{fill:#333;color:#333;}#mermaidChart0 .node rect,#mermaidChart0 .node circle,#mermaidChart0 .node ellipse,#mermaidChart0 .node polygon,#mermaidChart0 .node path{fill:#ECECFF;stroke:#9370DB;stroke-width:1px;}#mermaidChart0 .rough-node .label text,#mermaidChart0 .node .label text,#mermaidChart0 .image-shape .label,#mermaidChart0 .icon-shape .label{text-anchor:middle;}#mermaidChart0 .node .katex path{fill:#000;stroke:#000;stroke-width:1px;}#mermaidChart0 .rough-node .label,#mermaidChart0 .node .label,#mermaidChart0 .image-shape .label,#mermaidChart0 .icon-shape .label{text-align:center;}#mermaidChart0 .node.clickable{cursor:pointer;}#mermaidChart0 .root .anchor path{fill:#333333!important;stroke-width:0;stroke:#333333;}#mermaidChart0 .arrowheadPath{fill:#333333;}#mermaidChart0 .edgePath .path{stroke:#333333;stroke-width:2.0px;}#mermaidChart0 .flowchart-link{stroke:#333333;fill:none;}#mermaidChart0 .edgeLabel{background-color:rgba(232,232,232, 0.8);text-align:center;}#mermaidChart0 .edgeLabel p{background-color:rgba(232,232,232, 0.8);}#mermaidChart0 .edgeLabel rect{opacity:0.5;background-color:rgba(232,232,232, 0.8);fill:rgba(232,232,232, 0.8);}#mermaidChart0 .labelBkg{background-color:rgba(232, 232, 232, 0.5);}#mermaidChart0 .cluster rect{fill:#ffffde;stroke:#aaaa33;stroke-width:1px;}#mermaidChart0 .cluster text{fill:#333;}#mermaidChart0 .cluster span{color:#333;}#mermaidChart0 div.mermaidTooltip{position:absolute;text-align:center;max-width:200px;padding:2px;font-family:sans-serif;font-size:12px;background:hsl(80, 100%, 96.2745098039%);border:1px solid #aaaa33;border-radius:2px;pointer-events:none;z-index:100;}#mermaidChart0 .flowchartTitleText{text-anchor:middle;font-size:18px;fill:#333;}#mermaidChart0 rect.text{fill:none;stroke-width:0;}#mermaidChart0 .icon-shape,#mermaidChart0 .image-shape{background-color:rgba(232,232,232, 0.8);text-align:center;}#mermaidChart0 .icon-shape p,#mermaidChart0 .image-shape p{background-color:rgba(232,232,232, 0.8);padding:2px;}#mermaidChart0 .icon-shape rect,#mermaidChart0 .image-shape rect{opacity:0.5;background-color:rgba(232,232,232, 0.8);fill:rgba(232,232,232, 0.8);}#mermaidChart0 .label-icon{display:inline-block;height:1em;overflow:visible;vertical-align:-0.125em;}#mermaidChart0 .node .label-icon path{fill:currentColor;stroke:revert;stroke-width:revert;}#mermaidChart0 :root{--mermaid-alt-font-family:sans-serif;}</style><g><marker id="mermaidChart0_flowchart-v2-pointEnd" class="marker flowchart-v2" viewBox="0 0 10 10" refX="5" refY="5" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowMarkerPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker><marker id="mermaidChart0_flowchart-v2-pointStart" class="marker flowchart-v2" viewBox="0 0 10 10" refX="4.5" refY="5" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8" orient="auto"><path d="M 0 5 L 10 10 L 10 0 z" class="arrowMarkerPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker><marker id="mermaidChart0_flowchart-v2-circleEnd" class="marker flowchart-v2" viewBox="0 0 10 10" refX="11" refY="5" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="11" orient="auto"><circle cx="5" cy="5" r="5" class="arrowMarkerPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></circle></marker><marker id="mermaidChart0_flowchart-v2-circleStart" class="marker flowchart-v2" viewBox="0 0 10 10" refX="-1" refY="5" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="11" orient="auto"><circle cx="5" cy="5" r="5" class="arrowMarkerPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></circle></marker><marker id="mermaidChart0_flowchart-v2-crossEnd" class="marker cross flowchart-v2" viewBox="0 0 11 11" refX="12" refY="5.2" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="11" orient="auto"><path d="M 1,1 l 9,9 M 10,1 l -9,9" class="arrowMarkerPath" style="stroke-width: 2; stroke-dasharray: 1, 0;"></path></marker><marker id="mermaidChart0_flowchart-v2-crossStart" class="marker cross flowchart-v2" viewBox="0 0 11 11" refX="-1" refY="5.2" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="11" orient="auto"><path d="M 1,1 l 9,9 M 10,1 l -9,9" class="arrowMarkerPath" style="stroke-width: 2; stroke-dasharray: 1, 0;"></path></marker><g class="root"><g class="clusters"></g><g class="edgePaths"><path d="M359,43.397L54,88L54,109" id="L_F_S_0" class=" edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style="" marker-end="url(#mermaidChart0_flowchart-v2-pointEnd)"></path><path d="M359,48.565L196,88L196,109" id="L_F_Bk_0" class=" edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style="" marker-end="url(#mermaidChart0_flowchart-v2-pointEnd)"></path><path d="M373.714,63L338,88L338,109" id="L_F_Ins_0" class=" edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style="" marker-end="url(#mermaidChart0_flowchart-v2-pointEnd)"></path><path d="M452.286,63L488,88L488,109" id="L_F_Act_0" class=" edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style="" marker-end="url(#mermaidChart0_flowchart-v2-pointEnd)"></path><path d="M467,47.667L646,88L646,109" id="L_F_CSrv_0" class=" edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style="" marker-end="url(#mermaidChart0_flowchart-v2-pointEnd)"></path><path d="M467,42.605L812,88L812,109" id="L_F_Applied_0" class=" edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style="" marker-end="url(#mermaidChart0_flowchart-v2-pointEnd)"></path><path d="M1201.887,55.104L1094.113,88L1094.113,109" id="L_MathEdu_HS_0" class=" edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style="" marker-end="url(#mermaidChart0_flowchart-v2-pointEnd)"></path><path d="M1223.685,63L1185.113,88L877.961,131.219" id="L_MathEdu_Applied_0" class=" edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style="" marker-end="url(#mermaidChart0_flowchart-v2-pointEnd)"></path><path d="M1271.351,63L1276.113,88L1276.113,109" id="L_MathEdu_Pure_0" class=" edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style="" marker-end="url(#mermaidChart0_flowchart-v2-pointEnd)"></path><path d="M1276.113,168L1276.113,193L1276.113,214" id="L_Pure_Univ_0" class=" edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style="" marker-end="url(#mermaidChart0_flowchart-v2-pointEnd)"></path><path d="M764.333,168L721,193L721,214" id="L_Applied_Stats_0" class=" edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style="" marker-end="url(#mermaidChart0_flowchart-v2-pointEnd)"></path><path d="M874,158.787L990,193L990,214" id="L_Applied_CalcTrans_0" class=" edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style="" marker-end="url(#mermaidChart0_flowchart-v2-pointEnd)"></path><path d="M667,256.362L460,298L460,319" id="L_Stats_BioStats_0" class=" edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style="" marker-end="url(#mermaidChart0_flowchart-v2-pointEnd)"></path><path d="M675.429,273L634,298L634,319" id="L_Stats_DataAnalysis_0" class=" edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style="" marker-end="url(#mermaidChart0_flowchart-v2-pointEnd)"></path><path d="M766.571,273L808,298L808,319" id="L_Stats_DataSci_0" class=" edge-thickness-normal edge-pattern-dotted edge-thickness-normal edge-pattern-solid flowchart-link" style="" marker-end="url(#mermaidChart0_flowchart-v2-pointEnd)"></path><path d="M990,273L990,298L990,319" id="L_CalcTrans_CSci_0" class=" edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style="" marker-end="url(#mermaidChart0_flowchart-v2-pointEnd)"></path><path d="M920,362.809L691.434,403L691.434,424" id="L_CSci_HW_0" class=" edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style="" marker-end="url(#mermaidChart0_flowchart-v2-pointEnd)"></path><path d="M939.655,378L893.887,403L893.887,424" id="L_CSci_SW_0" class=" edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style="" marker-end="url(#mermaidChart0_flowchart-v2-pointEnd)"></path><path d="M1040.345,378L1086.113,403L1086.113,424" id="L_CSci_Algo_0" class=" edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style="" marker-end="url(#mermaidChart0_flowchart-v2-pointEnd)"></path><path d="M1060,364.987L1243.676,403L1243.676,424" id="L_CSci_AI_0" class=" edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style="" marker-end="url(#mermaidChart0_flowchart-v2-pointEnd)"></path></g><g class="edgeLabels"><g class="edgeLabel"><g class="label" transform="translate(0, 0)"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel "></span></div></foreignObject></g></g><g class="edgeLabel"><g class="label" transform="translate(0, 0)"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel "></span></div></foreignObject></g></g><g class="edgeLabel"><g class="label" transform="translate(0, 0)"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel "></span></div></foreignObject></g></g><g class="edgeLabel"><g class="label" transform="translate(0, 0)"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel "></span></div></foreignObject></g></g><g class="edgeLabel"><g class="label" transform="translate(0, 0)"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel "></span></div></foreignObject></g></g><g class="edgeLabel"><g class="label" transform="translate(0, 0)"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel "></span></div></foreignObject></g></g><g class="edgeLabel"><g class="label" transform="translate(0, 0)"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel "></span></div></foreignObject></g></g><g class="edgeLabel"><g class="label" transform="translate(0, 0)"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel "></span></div></foreignObject></g></g><g class="edgeLabel"><g class="label" transform="translate(0, 0)"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel "></span></div></foreignObject></g></g><g class="edgeLabel"><g class="label" transform="translate(0, 0)"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel "></span></div></foreignObject></g></g><g class="edgeLabel"><g class="label" transform="translate(0, 0)"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel "></span></div></foreignObject></g></g><g class="edgeLabel"><g class="label" transform="translate(0, 0)"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel "></span></div></foreignObject></g></g><g class="edgeLabel"><g class="label" transform="translate(0, 0)"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel "></span></div></foreignObject></g></g><g class="edgeLabel"><g class="label" transform="translate(0, 0)"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel "></span></div></foreignObject></g></g><g class="edgeLabel"><g class="label" transform="translate(0, 0)"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel "></span></div></foreignObject></g></g><g class="edgeLabel"><g class="label" transform="translate(0, 0)"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel "></span></div></foreignObject></g></g><g class="edgeLabel"><g class="label" transform="translate(0, 0)"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel "></span></div></foreignObject></g></g><g class="edgeLabel"><g class="label" transform="translate(0, 0)"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel "></span></div></foreignObject></g></g><g class="edgeLabel"><g class="label" transform="translate(0, 0)"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel "></span></div></foreignObject></g></g><g class="edgeLabel"><g class="label" transform="translate(0, 0)"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel "></span></div></foreignObject></g></g></g><g class="nodes"><g class="node default  " id="flowchart-F-0" transform="translate(413, 35.5)"><rect class="basic label-container" style="" x="-54" y="-27.5" width="108" height="55"></rect><g class="label" style="" transform="translate(-24, -12.5)"><rect></rect><foreignObject width="48" height="25"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="nodeLabel "><p>金融类</p></span></div></foreignObject></g></g><g class="node default  " id="flowchart-S-1" transform="translate(54, 140.5)"><rect class="basic label-container" style="" x="-46" y="-27.5" width="92" height="55"></rect><g class="label" style="" transform="translate(-16, -12.5)"><rect></rect><foreignObject width="32" height="25"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="nodeLabel "><p>证券</p></span></div></foreignObject></g></g><g class="node default  " id="flowchart-Bk-2" transform="translate(196, 140.5)"><rect class="basic label-container" style="" x="-46" y="-27.5" width="92" height="55"></rect><g class="label" style="" transform="translate(-16, -12.5)"><rect></rect><foreignObject width="32" height="25"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="nodeLabel "><p>银行</p></span></div></foreignObject></g></g><g class="node default  " id="flowchart-Ins-3" transform="translate(338, 140.5)"><rect class="basic label-container" style="" x="-46" y="-27.5" width="92" height="55"></rect><g class="label" style="" transform="translate(-16, -12.5)"><rect></rect><foreignObject width="32" height="25"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="nodeLabel "><p>保险</p></span></div></foreignObject></g></g><g class="node default  " id="flowchart-Act-4" transform="translate(488, 140.5)"><rect class="basic label-container" style="" x="-54" y="-27.5" width="108" height="55"></rect><g class="label" style="" transform="translate(-24, -12.5)"><rect></rect><foreignObject width="48" height="25"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="nodeLabel "><p>精算师</p></span></div></foreignObject></g></g><g class="node default  " id="flowchart-CSrv-5" transform="translate(646, 140.5)"><rect class="basic label-container" style="" x="-54" y="-27.5" width="108" height="55"></rect><g class="label" style="" transform="translate(-24, -12.5)"><rect></rect><foreignObject width="48" height="25"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="nodeLabel "><p>公务员</p></span></div></foreignObject></g></g><g class="node default  " id="flowchart-Applied-6" transform="translate(812, 140.5)"><rect class="basic label-container" style="" x="-62" y="-27.5" width="124" height="55"></rect><g class="label" style="" transform="translate(-32, -12.5)"><rect></rect><foreignObject width="64" height="25"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="nodeLabel "><p>应用数学</p></span></div></foreignObject></g></g><g class="node default  " id="flowchart-MathEdu-7" transform="translate(1266.11328125, 35.5)"><rect class="basic label-container" style="" x="-64.2265625" y="-27.5" width="128.453125" height="55"></rect><g class="label" style="" transform="translate(-34.2265625, -12.5)"><rect></rect><foreignObject width="68.453125" height="25"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="nodeLabel "><p>数学/师范</p></span></div></foreignObject></g></g><g class="node default  " id="flowchart-HS-8" transform="translate(1094.11328125, 140.5)"><rect class="basic label-container" style="" x="-78" y="-27.5" width="156" height="55"></rect><g class="label" style="" transform="translate(-48, -12.5)"><rect></rect><foreignObject width="96" height="25"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="nodeLabel "><p>初高中教师编</p></span></div></foreignObject></g></g><g class="node default  " id="flowchart-Pure-9" transform="translate(1276.11328125, 140.5)"><rect class="basic label-container" style="" x="-54" y="-27.5" width="108" height="55"></rect><g class="label" style="" transform="translate(-24, -12.5)"><rect></rect><foreignObject width="48" height="25"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="nodeLabel "><p>纯数学</p></span></div></foreignObject></g></g><g class="node default  " id="flowchart-Univ-10" transform="translate(1276.11328125, 245.5)"><rect class="basic label-container" style="" x="-80.2265625" y="-27.5" width="160.453125" height="55"></rect><g class="label" style="" transform="translate(-50.2265625, -12.5)"><rect></rect><foreignObject width="100.453125" height="25"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="nodeLabel "><p>科研/大学教职</p></span></div></foreignObject></g></g><g class="node default  " id="flowchart-CalcTrans-11" transform="translate(990, 245.5)"><rect class="basic label-container" style="" x="-70" y="-27.5" width="140" height="55"></rect><g class="label" style="" transform="translate(-40, -12.5)"><rect></rect><foreignObject width="80" height="25"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="nodeLabel "><p>计算机转码</p></span></div></foreignObject></g></g><g class="node default  " id="flowchart-CSci-12" transform="translate(990, 350.5)"><rect class="basic label-container" style="" x="-70" y="-27.5" width="140" height="55"></rect><g class="label" style="" transform="translate(-40, -12.5)"><rect></rect><foreignObject width="80" height="25"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="nodeLabel "><p>计算机科学</p></span></div></foreignObject></g></g><g class="node default  " id="flowchart-Stats-13" transform="translate(721, 245.5)"><rect class="basic label-container" style="" x="-54" y="-27.5" width="108" height="55"></rect><g class="label" style="" transform="translate(-24, -12.5)"><rect></rect><foreignObject width="48" height="25"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="nodeLabel "><p>统计类</p></span></div></foreignObject></g></g><g class="node default  " id="flowchart-BioStats-14" transform="translate(460, 350.5)"><rect class="basic label-container" style="" x="-62" y="-27.5" width="124" height="55"></rect><g class="label" style="" transform="translate(-32, -12.5)"><rect></rect><foreignObject width="64" height="25"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="nodeLabel "><p>生物统计</p></span></div></foreignObject></g></g><g class="node default  " id="flowchart-DataAnalysis-15" transform="translate(634, 350.5)"><rect class="basic label-container" style="" x="-62" y="-27.5" width="124" height="55"></rect><g class="label" style="" transform="translate(-32, -12.5)"><rect></rect><foreignObject width="64" height="25"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="nodeLabel "><p>数据分析</p></span></div></foreignObject></g></g><g class="node default  " id="flowchart-DataSci-16" transform="translate(808, 350.5)"><rect class="basic label-container" style="" x="-62" y="-27.5" width="124" height="55"></rect><g class="label" style="" transform="translate(-32, -12.5)"><rect></rect><foreignObject width="64" height="25"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="nodeLabel "><p>数据科学</p></span></div></foreignObject></g></g><g class="node default  " id="flowchart-HW-17" transform="translate(691.43359375, 455.5)"><rect class="basic label-container" style="" x="-80.2265625" y="-27.5" width="160.453125" height="55"></rect><g class="label" style="" transform="translate(-50.2265625, -12.5)"><rect></rect><foreignObject width="100.453125" height="25"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="nodeLabel "><p>电子信息/硬件</p></span></div></foreignObject></g></g><g class="node default  " id="flowchart-SW-18" transform="translate(893.88671875, 455.5)"><rect class="basic label-container" style="" x="-72.2265625" y="-27.5" width="144.453125" height="55"></rect><g class="label" style="" transform="translate(-42.2265625, -12.5)"><rect></rect><foreignObject width="84.453125" height="25"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="nodeLabel "><p>程序员/软件</p></span></div></foreignObject></g></g><g class="node default  " id="flowchart-Algo-19" transform="translate(1086.11328125, 455.5)"><rect class="basic label-container" style="" x="-70" y="-27.5" width="140" height="55"></rect><g class="label" style="" transform="translate(-40, -12.5)"><rect></rect><foreignObject width="80" height="25"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="nodeLabel "><p>算法工程师</p></span></div></foreignObject></g></g><g class="node default  " id="flowchart-AI-20" transform="translate(1243.67578125, 455.5)"><rect class="basic label-container" style="" x="-37.5625" y="-27.5" width="75.125" height="55"></rect><g class="label" style="" transform="translate(-7.5625, -12.5)"><rect></rect><foreignObject width="15.125" height="25"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="nodeLabel "><p>AI</p></span></div></foreignObject></g></g></g></g></g></svg></div><div class="md-diagram-panel md-fences-adv-panel" lang="mermaid"><svg id="mermaidChart1" width="100%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 716.984375 450" style="max-width: 716.984375px;" role="graphics-document document" aria-roledescription="pie" class="mermaid-svg"><style>#mermaidChart1{font-family:sans-serif;font-size:16px;fill:#333;}@keyframes edge-animation-frame{from{stroke-dashoffset:0;}}@keyframes dash{to{stroke-dashoffset:0;}}#mermaidChart1 .edge-animation-slow{stroke-dasharray:9,5!important;stroke-dashoffset:900;animation:dash 50s linear infinite;stroke-linecap:round;}#mermaidChart1 .edge-animation-fast{stroke-dasharray:9,5!important;stroke-dashoffset:900;animation:dash 20s linear infinite;stroke-linecap:round;}#mermaidChart1 .error-icon{fill:#552222;}#mermaidChart1 .error-text{fill:#552222;stroke:#552222;}#mermaidChart1 .edge-thickness-normal{stroke-width:1px;}#mermaidChart1 .edge-thickness-thick{stroke-width:3.5px;}#mermaidChart1 .edge-pattern-solid{stroke-dasharray:0;}#mermaidChart1 .edge-thickness-invisible{stroke-width:0;fill:none;}#mermaidChart1 .edge-pattern-dashed{stroke-dasharray:3;}#mermaidChart1 .edge-pattern-dotted{stroke-dasharray:2;}#mermaidChart1 .marker{fill:#333333;stroke:#333333;}#mermaidChart1 .marker.cross{stroke:#333333;}#mermaidChart1 svg{font-family:sans-serif;font-size:16px;}#mermaidChart1 p{margin:0;}#mermaidChart1 .pieCircle{stroke:black;stroke-width:2px;opacity:0.7;}#mermaidChart1 .pieOuterCircle{stroke:black;stroke-width:2px;fill:none;}#mermaidChart1 .pieTitleText{text-anchor:middle;font-size:25px;fill:black;font-family:sans-serif;}#mermaidChart1 .slice{font-family:sans-serif;fill:#333;font-size:17px;}#mermaidChart1 .legend text{fill:black;font-family:sans-serif;font-size:17px;}#mermaidChart1 :root{--mermaid-alt-font-family:sans-serif;}</style><g></g><g transform="translate(225,225)"><circle cx="0" cy="0" r="186" class="pieOuterCircle"></circle><path d="M0,-185A185,185,0,0,1,141.801,118.817L0,0Z" fill="#ECECFF" class="pieCircle"></path><path d="M141.801,118.817A185,185,0,0,1,-153.66,103.022L0,0Z" fill="#ffffde" class="pieCircle"></path><path d="M-153.66,103.022A185,185,0,0,1,-174.453,-61.572L0,0Z" fill="hsl(80, 100%, 56.2745098039%)" class="pieCircle"></path><path d="M-174.453,-61.572A185,185,0,0,1,-134.859,-126.641L0,0Z" fill="hsl(240, 100%, 86.2745098039%)" class="pieCircle"></path><path d="M-134.859,-126.641A185,185,0,0,1,-90.141,-161.554L0,0Z" fill="hsl(60, 100%, 63.5294117647%)" class="pieCircle"></path><path d="M-90.141,-161.554A185,185,0,0,1,-54.953,-176.65L0,0Z" fill="hsl(80, 100%, 76.2745098039%)" class="pieCircle"></path><path d="M-54.953,-176.65A185,185,0,0,1,-36.946,-181.273L0,0Z" fill="hsl(300, 100%, 76.2745098039%)" class="pieCircle"></path><path d="M-36.946,-181.273A185,185,0,0,1,-18.567,-184.066L0,0Z" fill="hsl(180, 100%, 56.2745098039%)" class="pieCircle"></path><path d="M-18.567,-184.066A185,185,0,0,1,0,-185L0,0Z" fill="hsl(0, 100%, 56.2745098039%)" class="pieCircle"></path><text transform="translate(125.72972916820399,-58.68217534558579)" class="slice" style="text-anchor: middle;">36%</text><text transform="translate(-7.406709454028162,138.55216763033198)" class="slice" style="text-anchor: middle;">30%</text><text transform="translate(-137.65591480738382,17.389986157047012)" class="slice" style="text-anchor: middle;">15%</text><text transform="translate(-118.5309936482771,-72.1246562886236)" class="slice" style="text-anchor: middle;">7%</text><text transform="translate(-85.38485886235983,-109.36630366367373)" class="slice" style="text-anchor: middle;">5%</text><text transform="translate(-54.70395300258421,-127.51094080858732)" class="slice" style="text-anchor: middle;">3%</text><text transform="translate(-34.505721844123194,-134.39091360659768)" class="slice" style="text-anchor: middle;">2%</text><text transform="translate(-20.843800490504755,-137.17542958238562)" class="slice" style="text-anchor: middle;">2%</text><text transform="translate(-6.971399147442618,-138.57475272908496)" class="slice" style="text-anchor: middle;">2%</text><text x="0" y="-200" class="pieTitleText">某大学应用数学系就业分布领域</text><g class="legend" transform="translate(216,-99)"><rect width="18" height="18" style="fill: rgb(236, 236, 255); stroke: rgb(236, 236, 255);"></rect><text x="22" y="14">证券公司 [36.1]</text></g><g class="legend" transform="translate(216,-77)"><rect width="18" height="18" style="fill: rgb(255, 255, 222); stroke: rgb(255, 255, 222);"></rect><text x="22" y="14">公募基金 [29.5]</text></g><g class="legend" transform="translate(216,-55)"><rect width="18" height="18" style="fill: rgb(181, 255, 32); stroke: rgb(181, 255, 32);"></rect><text x="22" y="14">政策性银行/商业银行 [14.8]</text></g><g class="legend" transform="translate(216,-33)"><rect width="18" height="18" style="fill: rgb(185, 185, 255); stroke: rgb(185, 185, 255);"></rect><text x="22" y="14">互联网 [6.6]</text></g><g class="legend" transform="translate(216,-11)"><rect width="18" height="18" style="fill: rgb(255, 255, 69); stroke: rgb(255, 255, 69);"></rect><text x="22" y="14">资产管理 [4.9]</text></g><g class="legend" transform="translate(216,11)"><rect width="18" height="18" style="fill: rgb(215, 255, 134); stroke: rgb(215, 255, 134);"></rect><text x="22" y="14">国家机关/事业单位 [3.3]</text></g><g class="legend" transform="translate(216,33)"><rect width="18" height="18" style="fill: rgb(255, 134, 255); stroke: rgb(255, 134, 255);"></rect><text x="22" y="14">VC/PE/FA [1.6]</text></g><g class="legend" transform="translate(216,55)"><rect width="18" height="18" style="fill: rgb(32, 255, 255); stroke: rgb(32, 255, 255);"></rect><text x="22" y="14">实业/综合性企业 [1.6]</text></g><g class="legend" transform="translate(216,77)"><rect width="18" height="18" style="fill: rgb(255, 32, 32); stroke: rgb(255, 32, 32);"></rect><text x="22" y="14">教育 [1.6]</text></g></g></svg></div><p><span> </span></p><h2 id='3-计算机申研选校专业'><span>3. 计算机申研选校+专业</span></h2><p><span>不同国家的项目设置</span></p><ol start='' ><li><p><strong><span>英国，香港，新加坡</span></strong><span>，大多都是一年制硕士，在一年制的基础上分出授课型和研究型。</span></p><ul><li><p><strong><span>优点 :</span></strong><span> QS排名高，回国认可度高。一年制节省时间和开销。  </span></p></li><li><p><strong><span>缺点 :</span></strong><span> 留在当地工作的可能性很小。</span></p></li></ul></li><li><p><strong><span>美国，加拿大</span></strong><span>，大多数是两年制，不分研究型和授课型。</span></p><p><span>不过少部分是一年制的professional项目，偏向找工作。</span></p><ul><li><p><strong><span>优点 :</span></strong><span> 美国就业岗位多，留在当地工作可能性较大。  </span></p></li><li><p><strong><span>缺点 :</span></strong><span> 美国开销大，申请难度高，很多好学校在QS200以外，回国认可相对低。</span></p></li></ul></li></ol><p>&nbsp;</p><h3 id='1-cs强校及分布'><span>(1) CS强校及分布</span></h3><p><span>参考网站: </span><a href='https://csrankings.org/'><span>csranking</span></a></p><ul><li><p><span>将过去10年各个大学的老师在CS四大领域顶会上发表论文的数量和影响力汇总，</span></p><p><span>其基准非常客观且透明(QS、US news有很多主观因素)，为目前cs领域接受度最高的排名。</span></p></li><li><p><span>大多数同学学CS选择: 北美、新加坡、香港、英国、澳大利亚备选。</span></p></li></ul><p>&nbsp;</p><h3 id='2-为什么大多数同学选择美国'><span>(2) 为什么大多数同学选择美国</span></h3><ul><li><p><strong><span>科研角度 :</span></strong><span> csranking Top200中，美国学校81，中国学校内地25 + 香港6，欧洲57</span></p><figure class='table-figure'><table><thead><tr><th style='text-align:left;' ><span>世界</span></th><th style='text-align:left;' ><span>美国</span></th><th style='text-align:left;' ><span>中国大陆</span></th></tr></thead><tbody><tr><td style='text-align:left;' ><span>194 ► University of Georgia 🇺🇸 📊</span></td><td style='text-align:left;' ><span>77 ► University of Arizona 🇺🇸 📊</span></td><td style='text-align:left;' ><span>21 ► Xiamen University 🇨🇳 📊</span></td></tr><tr><td style='text-align:left;' ><span>194 ► University of Sheffield 🇬🇧 📊</span></td><td style='text-align:left;' ><span>77 ► University of Georgia 🇺🇸 📊</span></td><td style='text-align:left;' ><span>23 ► Hunan University 🇨🇳 📊</span></td></tr><tr><td style='text-align:left;' ><span>194 ► University of Surrey 🇬🇧 📊</span></td><td style='text-align:left;' ><span>77 ► Washington State University 🇺🇸 📊</span></td><td style='text-align:left;' ><span>24 ► Shandong University 🇨🇳 📊</span></td></tr><tr><td style='text-align:left;' ><span>194 ► Washington State University 🇺🇸 📊</span></td><td style='text-align:left;' ><span>82 ► California Institute of Technology 🇺🇸 📊</span></td><td style='text-align:left;' ><span>24 ► Xidian University 🇨🇳 📊</span></td></tr><tr><td style='text-align:left;' ><span>194 ► Xidian University 🇨🇳 📊</span></td><td style='text-align:left;' ><span>欧洲</span></td><td style='text-align:left;' ><span>26 ► NWPU 🇨🇳 📊</span></td></tr><tr><td style='text-align:left;' ><span>210 ► California Institute of Technology 🇺🇸 📊</span></td><td style='text-align:left;' ><span>53 ► Hasso Plattner Institute 🇩🇪 📊</span></td><td style='text-align:left;' >&nbsp;</td></tr><tr><td style='text-align:left;' ><span>210 ► Cardiff University 🇬🇧 📊</span></td><td style='text-align:left;' ><span>53 ► University of Freiburg 🇩🇪 📊</span></td><td style='text-align:left;' >&nbsp;</td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>53 ► University of Sheffield 🇬🇧 📊</span></td><td style='text-align:left;' >&nbsp;</td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>53 ► University of Surrey 🇬🇧 📊</span></td><td style='text-align:left;' >&nbsp;</td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>58 ► Cardiff University 🇬🇧 📊</span></td><td style='text-align:left;' >&nbsp;</td></tr></tbody></table></figure></li><li><p><strong><span>找工作角度 :</span></strong><span> 世界500强中与计算机相关的企业 :</span></p><p><a href='https://finance.sina.com.cn/tech/roll/2024-08-06/doc-inchsfmn0304481.shtml' target='_blank' class='url'>https://finance.sina.com.cn/tech/roll/2024-08-06/doc-inchsfmn0304481.shtml</a></p><div class="md-diagram-panel md-fences-adv-panel" lang="mermaid"><svg id="mermaidChart2" width="100%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 586.625 450" style="max-width: 586.625px;" role="graphics-document document" aria-roledescription="pie" class="mermaid-svg"><style>#mermaidChart2{font-family:sans-serif;font-size:16px;fill:#333;}@keyframes edge-animation-frame{from{stroke-dashoffset:0;}}@keyframes dash{to{stroke-dashoffset:0;}}#mermaidChart2 .edge-animation-slow{stroke-dasharray:9,5!important;stroke-dashoffset:900;animation:dash 50s linear infinite;stroke-linecap:round;}#mermaidChart2 .edge-animation-fast{stroke-dasharray:9,5!important;stroke-dashoffset:900;animation:dash 20s linear infinite;stroke-linecap:round;}#mermaidChart2 .error-icon{fill:#552222;}#mermaidChart2 .error-text{fill:#552222;stroke:#552222;}#mermaidChart2 .edge-thickness-normal{stroke-width:1px;}#mermaidChart2 .edge-thickness-thick{stroke-width:3.5px;}#mermaidChart2 .edge-pattern-solid{stroke-dasharray:0;}#mermaidChart2 .edge-thickness-invisible{stroke-width:0;fill:none;}#mermaidChart2 .edge-pattern-dashed{stroke-dasharray:3;}#mermaidChart2 .edge-pattern-dotted{stroke-dasharray:2;}#mermaidChart2 .marker{fill:#333333;stroke:#333333;}#mermaidChart2 .marker.cross{stroke:#333333;}#mermaidChart2 svg{font-family:sans-serif;font-size:16px;}#mermaidChart2 p{margin:0;}#mermaidChart2 .pieCircle{stroke:black;stroke-width:2px;opacity:0.7;}#mermaidChart2 .pieOuterCircle{stroke:black;stroke-width:2px;fill:none;}#mermaidChart2 .pieTitleText{text-anchor:middle;font-size:25px;fill:black;font-family:sans-serif;}#mermaidChart2 .slice{font-family:sans-serif;fill:#333;font-size:17px;}#mermaidChart2 .legend text{fill:black;font-family:sans-serif;font-size:17px;}#mermaidChart2 :root{--mermaid-alt-font-family:sans-serif;}</style><g></g><g transform="translate(225,225)"><circle cx="0" cy="0" r="186" class="pieOuterCircle"></circle><path d="M0,-185A185,185,0,0,1,117.923,142.545L0,0Z" fill="#ECECFF" class="pieCircle"></path><path d="M117.923,142.545A185,185,0,0,1,-183.541,23.187L0,0Z" fill="#ffffde" class="pieCircle"></path><path d="M-183.541,23.187A185,185,0,0,1,-175.945,-57.168L0,0Z" fill="hsl(80, 100%, 56.2745098039%)" class="pieCircle"></path><path d="M-175.945,-57.168A185,185,0,0,1,-149.668,-108.74L0,0Z" fill="hsl(240, 100%, 86.2745098039%)" class="pieCircle"></path><path d="M-149.668,-108.74A185,185,0,0,1,-108.74,-149.668L0,0Z" fill="hsl(60, 100%, 63.5294117647%)" class="pieCircle"></path><path d="M-108.74,-149.668A185,185,0,0,1,-68.103,-172.009L0,0Z" fill="hsl(80, 100%, 76.2745098039%)" class="pieCircle"></path><path d="M-68.103,-172.009A185,185,0,0,1,-46.008,-179.188L0,0Z" fill="hsl(300, 100%, 76.2745098039%)" class="pieCircle"></path><path d="M-46.008,-179.188A185,185,0,0,1,-23.187,-183.541L0,0Z" fill="hsl(180, 100%, 56.2745098039%)" class="pieCircle"></path><path d="M-23.187,-183.541A185,185,0,0,1,0,-185L0,0Z" fill="hsl(0, 100%, 56.2745098039%)" class="pieCircle"></path><text transform="translate(130.5472066923988,-46.99988643403415)" class="slice" style="text-anchor: middle;">39%</text><text transform="translate(-51.07728168499912,129.00648741699487)" class="slice" style="text-anchor: middle;">34%</text><text transform="translate(-138.13422258867735,-13.057528472944016)" class="slice" style="text-anchor: middle;">7%</text><text transform="translate(-123.627155231136,-62.99118183886221)" class="slice" style="text-anchor: middle;">5%</text><text transform="translate(-98.1110658896334,-98.11106588963354)" class="slice" style="text-anchor: middle;">5%</text><text transform="translate(-66.84332228161288,-121.58755185608614)" class="slice" style="text-anchor: middle;">4%</text><text transform="translate(-42.876107969523744,-131.95909163595263)" class="slice" style="text-anchor: middle;">2%</text><text transform="translate(-25.999157398769174,-136.2923560386056)" class="slice" style="text-anchor: middle;">2%</text><text transform="translate(-8.712184584691961,-138.47620856942268)" class="slice" style="text-anchor: middle;">2%</text><text x="0" y="-200" class="pieTitleText">世界500强ICT领域各国企业占比</text><g class="legend" transform="translate(216,-99)"><rect width="18" height="18" style="fill: rgb(236, 236, 255); stroke: rgb(236, 236, 255);"></rect><text x="22" y="14">美国 [39]</text></g><g class="legend" transform="translate(216,-77)"><rect width="18" height="18" style="fill: rgb(255, 255, 222); stroke: rgb(255, 255, 222);"></rect><text x="22" y="14">中国 [34]</text></g><g class="legend" transform="translate(216,-55)"><rect width="18" height="18" style="fill: rgb(181, 255, 32); stroke: rgb(181, 255, 32);"></rect><text x="22" y="14">日本 [7]</text></g><g class="legend" transform="translate(216,-33)"><rect width="18" height="18" style="fill: rgb(185, 185, 255); stroke: rgb(185, 185, 255);"></rect><text x="22" y="14">韩国 [5]</text></g><g class="legend" transform="translate(216,-11)"><rect width="18" height="18" style="fill: rgb(255, 255, 69); stroke: rgb(255, 255, 69);"></rect><text x="22" y="14">法国 [5]</text></g><g class="legend" transform="translate(216,11)"><rect width="18" height="18" style="fill: rgb(215, 255, 134); stroke: rgb(215, 255, 134);"></rect><text x="22" y="14">德国 [4]</text></g><g class="legend" transform="translate(216,33)"><rect width="18" height="18" style="fill: rgb(255, 134, 255); stroke: rgb(255, 134, 255);"></rect><text x="22" y="14">墨西哥 [2]</text></g><g class="legend" transform="translate(216,55)"><rect width="18" height="18" style="fill: rgb(32, 255, 255); stroke: rgb(32, 255, 255);"></rect><text x="22" y="14">英国 [2]</text></g><g class="legend" transform="translate(216,77)"><rect width="18" height="18" style="fill: rgb(255, 32, 32); stroke: rgb(255, 32, 32);"></rect><text x="22" y="14">西班牙 [2]</text></g></g></svg></div></li></ul><p>&nbsp;</p><h3 id='3-cs申研国家地区选择'><span>(3) CS申研国家地区选择</span></h3><p><span>从科研和找工作两个方面分析，导致大多数同学出国学 CS 只选择美国、香港新加坡。</span></p><p><span>最终导致美国 CS 申请难度成为美国独一档，也成为了其他专业同学拿到的 offer 都赫赫有名，</span></p><p><span>但是数学系同学拿到 offer 不是很有名的原因。</span></p><p><strong><span>申研难度 :</span></strong><span> </span></p><ul><li><p><span>美国 &gt; 英国、香港、新加坡 &gt; 澳大利亚</span></p></li><li><p><span>计算机 CS &gt; STEM 其他理工科、商科 &gt; 文科、管理学等</span></p></li></ul><p>&nbsp;</p><h3 id='4-美国学校cs大概排名'><span>(4) 美国学校CS大概排名</span></h3><p><code>f(学校名次, CS名次, 地理位置) = 学校申请难度</code></p><figure class='table-figure'><table><thead><tr><th style='text-align:center;' ><span>Tier</span></th><th><span>Universities</span></th></tr></thead><tbody><tr><td style='text-align:center;' ><span>0</span></td><td><strong><span>CS四大强校 :</span></strong><span> MIT、斯坦福、卡内基梅隆、加州伯克利</span></td></tr><tr><td style='text-align:center;' ><span>1</span></td><td><strong><span>学校非常出名 :</span></strong><span> 普林斯顿、耶鲁等</span><br /><strong><span>CS非常出名 :</span></strong><span> 康奈尔、UIUC、佐治亚理工、华盛顿西雅图、密歇根安娜堡等</span></td></tr><tr><td style='text-align:center;' ><span>2</span></td><td><strong><span>学校比较出名 :</span></strong><span> 布朗、芝大、西北等</span><br /><strong><span>CS比较出名 :</span></strong><span> 加州圣地亚哥、威斯康辛、德州奥斯汀等</span></td></tr><tr><td style='text-align:center;' ><span>3</span></td><td><strong><span>学校很好型 :</span></strong><span> 约翰霍普金斯等</span><br /><strong><span>学校名气大型 :</span></strong><span> 纽约大学等</span><br /><strong><span>学校、CS、地理位置都不错型 :</span></strong><span> 南加州等</span></td></tr><tr><td style='text-align:center;' ><span>4</span></td><td><span>Top30里CS一般的和Top50里CS比较好的</span></td></tr><tr><td style='text-align:center;' ><span>5</span></td><td><span>Top50里CS一般的Top100里CS比较好+地理位置好的</span></td></tr><tr><td style='text-align:center;' ><span>6</span></td><td><span>Top100里CS比较好的</span></td></tr><tr><td style='text-align:center;' ><span>7</span></td><td><span>Top100里其他的和Top200 R1地理位置好或CS好的</span></td></tr></tbody></table></figure><p>&nbsp;</p><h3 id='5-美国常见硕士项目'><span>(5) 美国常见硕士项目</span></h3><p><code>g(学位/学制, 专业) = 项目申请难度</code></p><p><strong><span>学位 :</span></strong></p><ul><li><p><strong><span>MS</span></strong><span>: Master of Science (with/without Thesis Track) (一年半-两年) </span></p></li></ul><p><strong><span>科学硕士 (选/不选论文) :</span></strong></p><ul><li><p><strong><span>MEng</span></strong><span>: Master of Engineering (一年-两年) (工程硕士) </span></p></li><li><p><strong><span>Professional Master</span></strong><span> (一年) (职业硕士)</span></p></li></ul><p><strong><span>难度 :</span></strong></p><ul><li><p><span>MS with thesis &gt; MS no thesis &gt; MEng &gt; Professional Master </span></p></li><li><p><span>科学硕士 (可选论文) &gt; 科学硕士 (不可选论文) &gt; 工程硕士 &gt; 职业硕士</span></p></li></ul><p><strong><span>专业 :</span></strong></p><ul><li><p><span>Computer Science (CS) (计算机科学)</span></p></li><li><p><span>Electrical Computer Engineering (ECE/CE) (电气工程、计算机工程)</span></p></li><li><p><span>Data Science (DS) (数据科学)</span></p></li><li><p><span>Information Science/Information Management (IS/IM) (信息科学)</span></p></li><li><p><span>Biostatistics/Bioinformatics (生物信息学)</span></p></li></ul><p><strong><span>交叉学科 :</span></strong></p><ul><li><p><span>Health Data Science、Data Science and Public Policy等</span></p></li></ul><p><strong><span>学位与专业的排列组合 = 项目 :</span></strong></p><ul><li><p><span>MSCS, MSIM, MCS (Master of Computer Science)</span></p></li></ul><p><strong><span>项目难度 :</span></strong></p><ul><li><p><span>CS &gt; ECE、DS &gt; IS、Biostatistics、交叉学科</span></p></li><li><p><span>MS with thesis &gt; MS no thesis &gt; MEng &gt; Professional Master</span></p></li></ul><p>&nbsp;</p><h3 id='6-硕士难度总结'><span>(6) 硕士难度总结</span></h3><p><strong><span>研究生难度 :</span></strong><span> </span></p><ul><li><p><span>美国 &gt; 英国、香港、新加坡 &gt; 澳大利亚</span></p></li><li><p><span>硬核理工科硕士 &gt; 理工科、商科硕士 &gt; 文科、社科、管理学硕士</span></p></li></ul><p><span>好学校还是好项目一般只能二选一</span></p><p><span>即便有些美国前10的差项目难度也比美国前30的好项目低很多</span></p><p><strong><span>只说录取学校，不谈具体项目的都是“耍流氓”</span></strong></p><p>&nbsp;</p><h3 id='7-美国博士'><span>(7) 美国博士</span></h3><p><strong><span>和硕士的最大区别 :</span></strong><span> 一个你给学校钱、一个学校给你钱</span></p><ul><li><p><span>90%美国博士都是全奖录取：免学费 + 医疗保险 + 生活费（5年）</span></p></li><li><p><span>因此导致美国博士申请非常难，直博不只是在和国内优秀的本科生竞争，</span></p><p><span>更多的是在国内外优秀的研究生竞争。</span></p></li></ul><p><strong><span>博士要求 :</span></strong></p><ul><li><p><span>GPA过线 + 科研经验/论文 + 2封以上强推荐信</span></p></li><li><p><span>connection（导师间互相推荐）&gt; 推荐信 &gt; 科研经验 &gt; GPA成绩 &gt; 语言、GRE等</span></p></li></ul><p><span>‍</span></p></div></div>
+
+<script>(function(){var e=document.body.parentElement,t=[],n=null,i=document.body.classList.contains("typora-export-collapse-outline"),r=function(e,t,n){document.addEventListener(e,function(e){if(!e.defaultPrevented)for(var i=e.target;i&&i!=this;i=i.parentNode)if(i.matches(t)){!1===n.call(i,e)&&(e.preventDefault(),e.stopPropagation());break}},!1)};function o(){return e.scrollTop}r("click",".outline-expander",function(e){var t=this.closest(".outline-item-wrapper").classList;return t.contains("outline-item-open")?t.remove("outline-item-open"):t.add("outline-item-open"),d(),!1}),r("click",".outline-item",function(e){var t=this.querySelector(".outline-label");if(location.hash="#"+t.getAttribute("href"),i){var n=this.closest(".outline-item-wrapper").classList;n.contains("outline-item-open")||n.add("outline-item-open"),c(),n.add("outline-item-active")}});var a,s,l=function(){var e=o();n=null;for(var i=0;i<t.length&&t[i][1]-e<60;i++)n=t[i]},c=function(){document.querySelectorAll(".outline-item-active").forEach(e=>e.classList.remove("outline-item-active")),document.querySelectorAll(".outline-item-single.outline-item-open").forEach(e=>e.classList.remove("outline-item-open"))},d=function(){if(n){c();var e=document.querySelector('.outline-label[href="#'+(CSS.escape?CSS.escape(n[0]):n[0])+'"]');if(e)if(i){var t=e.closest(".outline-item-open>ul>.outline-item-wrapper");if(t)t.classList.add("outline-item-active");else{for(var r=(e=e.closest(".outline-item-wrapper")).parentElement.closest(".outline-item-wrapper");r;)r=(e=r).parentElement.closest(".outline-item-wrapper");e.classList.add("outline-item-active")}}else e.closest(".outline-item-wrapper").classList.add("outline-item-active")}};window.addEventListener("scroll",function(e){a&&clearTimeout(a),a=setTimeout(function(){l(),d()},300)});var u=function(){s=setTimeout(function(){!function(){t=[];var e=o();document.querySelector("#write").querySelectorAll("h1, h2, h3, h4, h5, h6").forEach(n=>{var i=n.getAttribute("id");t.push([i,e+n.getBoundingClientRect().y])})}(),l(),d()},300)};window.addEventListener("resize",function(e){s&&clearTimeout(s),u()}),u()})();</script></body>
+</html>

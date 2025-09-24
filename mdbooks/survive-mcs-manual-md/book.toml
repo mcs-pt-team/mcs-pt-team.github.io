@@ -1,7 +1,0 @@
-[book]
-authors = ["mcs-pt-team"]
-language = "en"
-src = "src"
-title = "survive-mcs-manual"
-[build]
-build-dir = "../../docs/survive-mcs-manual"
