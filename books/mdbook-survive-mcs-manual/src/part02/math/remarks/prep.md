@@ -18,4 +18,7 @@
 
 ## 4. Notes Sharing 笔记分享
 
--   TODO
+-   MCS PT Team 2023 Summer
+    -   [Final Exam Review](https://drive.google.com/file/d/1jmTcVOxRncmkOTb9_AJtVtrQLMVCFfMx/view?usp=share_link)
+    -   [Some Hints about Proof](https://drive.google.com/file/d/10UCozkN51KBM2SfffBn-z7jH01dgI9zm/view?usp=share_link)
+    -   [More about Mathematical Logic](https://drive.google.com/file/d/1CBarxAEY0BUjXU-eVsfpHz4f4-sRY6hu/view?usp=share_link)
