@@ -1,3 +1,4 @@
+# file: book.toml
 [book]
 authors = ["mcs-pt-team"]
 language = "en"
@@ -5,5 +6,6 @@ src = "src"
 title = "survive-mcs-manual"
 [build]
 build-dir = "../../docs/survive-mcs-manual"
-#[output.html]
-#additional-css = ["theme/vue.css"]
+[output.html.fold]
+enable = true          # 开启折叠功能
+level = 1              # 折叠从第几层开始（可根据需要调整）

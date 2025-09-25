@@ -1,0 +1,753 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'><style type='text/css'>html {overflow-x: initial !important;}</style>
+<style type='text/css'  id="style-base">:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; --title-bar-height: 20px; }
+.mac-os-11 { --title-bar-height: 28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, "Segoe UI Emoji", "SF Pro", sans-serif; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, h4, h5 { white-space: pre-wrap; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.428571; overflow-x: hidden; background: inherit; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p *, #write.first-line-indent svg * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font-style: inherit; font-variant-caps: inherit; font-weight: inherit; font-width: inherit; font-size: inherit; line-height: inherit; font-family: inherit; font-size-adjust: inherit; font-kerning: inherit; font-variant-alternates: inherit; font-variant-ligatures: inherit; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-variant-position: inherit; font-variant-emoji: inherit; font-feature-settings: inherit; font-optical-sizing: inherit; font-variation-settings: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; position: relative; }
+#write svg h1, #write svg h2, #write svg h3, #write svg h4, #write svg h5, #write svg h6, #write svg p { position: static; white-space: nowrap; overflow: visible; }
+foreignObject { overflow: visible; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+li p { orphans: 1; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+thead, tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right-width: 0px; border-right-style: none; border-right-color: currentcolor; background-color: inherit; }
+.CodeMirror-linenumber { -webkit-user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+svg { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; border-color: transparent !important; padding-top: 0px !important; padding-bottom: 0px !important; }
+  .typora-export * { print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  #write > p:nth-child(1) { margin-top: 0px; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+  figure { overflow-x: visible; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: medium; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.reversefootnote { font-family: ui-monospace, sans-serif; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: medium !important; border-style: none !important; border-color: currentcolor !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom-width: 0px; border-bottom-style: none; border-bottom-color: currentcolor; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: medium; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.mermaid-svg { margin: auto; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex: 2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; overflow-wrap: anywhere; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.428571rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left-width: 28px; border-left-style: solid; border-left-color: transparent; border-right-width: 28px; border-right-style: solid; border-right-color: transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right-width: 8px; border-right-style: solid; border-right-color: transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+mjx-container { break-inside: avoid; }
+.md-alert.md-alert-note { border-left-color: rgb(9, 105, 218); }
+.md-alert.md-alert-important { border-left-color: rgb(130, 80, 223); }
+.md-alert.md-alert-warning { border-left-color: rgb(154, 103, 0); }
+.md-alert.md-alert-tip { border-left-color: rgb(31, 136, 61); }
+.md-alert.md-alert-caution { border-left-color: rgb(207, 34, 46); }
+.md-alert { padding: 0px 1em; margin-bottom: 16px; color: inherit; border-left-width: 0.25em; border-left-style: solid; border-left-color: rgb(0, 0, 0); }
+.md-alert-text-note { color: rgb(9, 105, 218); }
+.md-alert-text-important { color: rgb(130, 80, 223); }
+.md-alert-text-warning { color: rgb(154, 103, 0); }
+.md-alert-text-tip { color: rgb(31, 136, 61); }
+.md-alert-text-caution { color: rgb(207, 34, 46); }
+.md-alert-text { font-size: 0.9rem; font-weight: 700; }
+.md-alert-text svg { fill: currentcolor; position: relative; top: 0.125em; margin-right: 1ch; overflow: visible; }
+.md-alert-text-container::after { content: attr(data-text); text-transform: capitalize; pointer-events: none; margin-right: 1ch; }
+
+</style>
+<style type='text/css'  id="style-theme_css">/* cyrillic-ext */
+/* cyrillic */
+/* greek-ext */
+/* greek */
+/* vietnamese */
+/* latin-ext */
+/* latin */
+/* cyrillic-ext */
+/* cyrillic */
+/* greek-ext */
+/* greek */
+/* vietnamese */
+/* latin-ext */
+/* latin */
+/* cyrillic-ext */
+/* cyrillic */
+/* greek-ext */
+/* greek */
+/* vietnamese */
+/* latin-ext */
+/* latin */
+/* cyrillic-ext */
+/* cyrillic */
+/* greek-ext */
+/* greek */
+/* vietnamese */
+/* latin-ext */
+/* latin */
+@font-face {
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 600;
+    src: local('Source Sans Pro SemiBold'), local('SourceSansPro-SemiBold'), url('file:///Users/shawnkuo/Library/Application%20Support/abnerworks.Typora/themes/vue/6xKydSBYKcSV-LCoeQqfX1RYOo3i54rwlxdu.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}@import '';
+
+:root {
+    --side-bar-bg-color: #fff;
+    --control-text-color: #777;
+    --font-sans-serif: 'Ubuntu', 'Source Sans Pro', sans-serif !important;
+    --font-monospace: 'Fira Code', 'Roboto Mono', monospace !important;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: var(--font-sans-serif);
+    color: #34495e;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.6rem;
+    letter-spacing: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+#write {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 20px 30px 100px;
+}
+
+#write p {
+    line-height: 1.6rem;
+    word-spacing: .05rem;
+}
+
+#write ol li {
+    padding-left: 0.5rem;
+}
+
+#write > ul:first-child,
+#write > ol:first-child {
+    margin-top: 30px;
+}
+
+body > *:first-child {
+    margin-top: 0 !important;
+}
+
+body > *:last-child {
+    margin-bottom: 0 !important;
+}
+
+a {
+    color: #42b983;
+    font-weight: 600;
+    padding: 0 2px;
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+
+h1 tt,
+h1 code {
+    font-size: inherit !important;
+}
+
+h2 tt,
+h2 code {
+    font-size: inherit !important;
+}
+
+h3 tt,
+h3 code {
+    font-size: inherit !important;
+}
+
+h4 tt,
+h4 code {
+    font-size: inherit !important;
+}
+
+h5 tt,
+h5 code {
+    font-size: inherit !important;
+}
+
+h6 tt,
+h6 code {
+    font-size: inherit !important;
+}
+
+h2 a,
+h3 a {
+    color: #34495e;
+}
+
+h1 {
+    padding-bottom: .4rem;
+    font-size: 2.2rem;
+    line-height: 1.3;
+}
+
+h2 {
+    font-size: 1.75rem;
+    line-height: 1.225;
+    margin: 35px 0 15px;
+    padding-bottom: 0.5em;
+    border-bottom: 1px solid #ddd;
+}
+
+h3 {
+    font-size: 1.4rem;
+    line-height: 1.43;
+    margin: 20px 0 7px;
+}
+
+h4 {
+    font-size: 1.2rem;
+}
+
+h5 {
+    font-size: 1rem;
+}
+
+h6 {
+    font-size: 1rem;
+    color: #777;
+}
+
+p,
+blockquote,
+ul,
+ol,
+dl,
+table {
+    margin: 0.8em 0;
+}
+
+li > ol,
+li > ul {
+    margin: 0 0;
+}
+
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+body > h2:first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+body > h1:first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+body > h3:first-child,
+body > h4:first-child,
+body > h5:first-child,
+body > h6:first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+a:first-child h1,
+a:first-child h2,
+a:first-child h3,
+a:first-child h4,
+a:first-child h5,
+a:first-child h6 {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+h1 p,
+h2 p,
+h3 p,
+h4 p,
+h5 p,
+h6 p {
+    margin-top: 0;
+}
+
+li p.first {
+    display: inline-block;
+}
+
+ul,
+ol {
+    padding-left: 30px;
+}
+
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+
+blockquote {
+    border-left: 4px solid #42b983;
+    padding: 10px 15px;
+    color: #777;
+    background-color: rgba(66, 185, 131, .1);
+}
+
+table {
+    padding: 0;
+    word-break: initial;
+}
+
+table tr {
+    border-top: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+
+table tr:nth-child(2n),
+thead {
+    background-color: #fafafa;
+}
+
+table tr th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    text-align: left;
+    margin: 0;
+    padding: 6px 13px;
+}
+
+table tr td {
+    border: 1px solid #dfe2e5;
+    text-align: left;
+    margin: 0;
+    padding: 6px 13px;
+}
+
+table tr th:first-child,
+table tr td:first-child {
+    margin-top: 0;
+}
+
+table tr th:last-child,
+table tr td:last-child {
+    margin-bottom: 0;
+}
+
+#write strong {
+    padding: 0 1px;
+}
+
+#write em {
+    padding: 0 5px 0 2px;
+}
+
+#write table thead th {
+    background-color: #f2f2f2;
+}
+
+#write .CodeMirror-gutters {
+    border-right: none;
+}
+
+#write .md-fences {
+    border: 1px solid #F4F4F4;
+    -webkit-font-smoothing: initial;
+    margin: 0.8rem 0 !important;
+    padding: 0.3rem 0 !important;
+    line-height: 1.43rem;
+    background-color: #F8F8F8 !important;
+    border-radius: 2px;
+    font-family: var(--font-monospace);
+    font-size: 0.85rem;
+    word-wrap: normal;
+}
+
+#write .CodeMirror-wrap .CodeMirror-code pre {
+    padding-left: 12px;
+}
+
+#write code, tt {
+    padding: 2px 4px;
+    border-radius: 2px;
+    font-family: var(--font-monospace);
+    font-size: 0.92rem;
+    color: #e96900;
+    background-color: #f8f8f8;
+}
+
+tt {
+    margin: 0 2px;
+}
+
+#write .md-footnote {
+    background-color: #f8f8f8;
+    color: #e96900;
+}
+
+/* heighlight. */
+#write mark {
+    background-color: #EBFFEB;
+    border-radius: 2px;
+    padding: 2px 4px;
+    margin: 0 2px;
+    color: #222;
+    font-weight: 500;
+}
+
+#write del {
+    padding: 1px 2px;
+}
+
+.cm-s-inner .cm-link,
+.cm-s-inner.cm-link {
+    color: #22a2c9;
+}
+
+.cm-s-inner .cm-string {
+    color: #22a2c9;
+}
+
+.md-task-list-item > input {
+    margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+
+    pre {
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+    background-color: #f8f8f8;
+}
+
+.md-diagram-panel {
+    position: static !important;
+}
+
+#write pre.md-meta-block {
+    padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block > .code-tooltip {
+    bottom: .375rem;
+}
+
+#write > h3.md-focus:before {
+    left: -1.5625rem;
+    top: .375rem;
+}
+
+#write > h4.md-focus:before {
+    left: -1.5625rem;
+    top: .285714286rem;
+}
+
+#write > h5.md-focus:before {
+    left: -1.5625rem;
+    top: .285714286rem;
+}
+
+#write > h6.md-focus:before {
+    left: -1.5625rem;
+    top: .285714286rem;
+}
+
+.md-image > .md-meta {
+    border-radius: 3px;
+    font-family: var(--font-monospace);
+    padding: 2px 0 0 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: inherit;
+}
+
+.md-toc {
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+#md-notification:before {
+    top: 10px;
+}
+
+/** focus mode */
+
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header,
+.context-menu,
+.megamenu-content,
+footer {
+    font-family: var(--font-sans-serif);
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state {
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+.html-for-mac .context-menu {
+    --item-hover-bg-color: #E6F0FE;
+}
+</style>
+<style type='text/css'  id="style-lp">ol, ul {padding-left: 40px}</style>
+<style type='text/css'  id="style-mac-print"> @media print { @page {margin: 0 0 0 0;} body.typora-export {padding-left: 0; padding-right: 0;} #write {padding:0;}}</style>
+
+<title>2024 数学系专场</title>
+</head>
+<body class='typora-export typora-export-show-outline typora-export-no-collapse-outline'><div class='typora-export-content'>
+<div class="typora-export-sidebar"><div class="outline-content"><li class="outline-item-wrapper outline-h1"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#2025-数学系专场">2025 数学系专场</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#会议基本信息"><strong>会议基本信息</strong></a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#参会校友背景及录取情况"><strong>参会校友背景及录取情况：</strong></a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#徐晨"><strong>徐晨</strong></a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#王元浩"><strong>王元浩</strong></a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#杨文涛"><strong>杨文涛</strong></a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#苗语"><strong>苗语</strong></a></div><ul class="outline-children"></ul></li></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#项目介绍与亮点推荐"><strong>项目介绍与亮点推荐</strong></a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#南加州大学uscece"><strong>南加州大学（USC）ECE</strong></a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#加州大学圣塔芭芭拉分校ucsb统计学博士"><strong>加州大学圣塔芭芭拉分校（UCSB）统计学（博士）</strong></a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#芝加哥大学university-of-chicago应用数学硕士"><strong>芝加哥大学（University of Chicago）应用数学（硕士）</strong></a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#佐治亚理工学院georgia-techcs"><strong>佐治亚理工学院（Georgia Tech）CS</strong></a></div><ul class="outline-children"></ul></li></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#申请经验分享与建议"><strong>申请经验分享与建议</strong></a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#生活成本与安全"><strong>生活成本与安全</strong></a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#其他建议"><strong>其他建议</strong></a></div><ul class="outline-children"></ul></li></ul></li></div></div><div id='write'  class=''><h1 id='2025-数学系专场'><span>2025 数学系专场</span></h1><p><span>好的，这是张清霞 Zoom 会议的中文笔记，内容按主题分类，不再严格按照时间顺序：</span></p><h2 id='会议基本信息'><strong><span>会议基本信息</span></strong></h2><ul><li><p><strong><span>时间：</span></strong><span>  2025年4月18日 16:43:07</span></p></li><li><p><strong><span>主题：</span></strong><span>  张清霞的Zoom会议（海外升学经验分享）</span></p></li><li><p><strong><span>分享人校友（发言顺序）：</span></strong><span>  徐晨、王元浩、杨文涛、苗语</span></p></li><li><p><strong><span>听众：</span></strong><span>  在校学生</span></p></li></ul><h2 id='参会校友背景及录取情况'><strong><span>参会校友背景及录取情况：</span></strong></h2><h3 id='徐晨'><strong><span>徐晨</span></strong></h3><ul><li><p><span>本科：广义大学（推测）EE专业。</span></p></li><li><p><span>目前就读：南加州大学（USC）工程学位 ECE 专业。</span></p></li><li><p><span>录取情况：UC Berkeley（DS）、莱斯大学（Rice）CS、南加州大学（USC）CS 和 应数、伊利诺伊大学厄巴纳-香槟分校（UIUC）本部 CS。</span></p></li><li><p><span>申请背景（针对USC ECE）：GPA 90分左右，3段科研经历（无突出成果），1段1个月实习，雅思 6.5。门槛相对较低。</span></p></li></ul><h3 id='王元浩'><strong><span>王元浩</span></strong></h3><ul><li><p><span>本科：广义大学（推测）。</span></p></li><li><p><span>录取情况：加州大学圣塔芭芭拉分校（UCSB）统计学直博（PhD direct entry）、哥伦比亚大学（Columbia）统计学硕士（网课）、南加州大学（USC）数据科学硕士、伊利诺伊大学厄巴纳-香槟分校（UIUC）应用数学硕士。</span></p></li><li><p><span>申请背景：未详细自述 GPA 和科研，但强调数学/应数看重推荐信。</span></p></li></ul><h3 id='杨文涛'><strong><span>杨文涛</span></strong></h3><ul><li><p><span>本科：广义大学（推测）2020届数学专业。</span></p></li><li><p><span>目前就读：芝加哥大学（University of Chicago）应用数学硕士。</span></p></li><li><p><span>录取情况：基本都是应用数学硕士 Offer。博士全聚德。Offers 包括芝加哥大学（最好）、华盛顿大学、明尼苏达大学、UIUC。</span></p></li><li><p><span>申请背景：本科数学高阶课全上，GPA 94+。推荐信来自广义大学的 Any Jie Kou, Luna, Luzi (已不在广义，在西班牙研究所）。托福 98，未考 GRE。认为本科数学科研作用不大。</span></p></li><li><p><span>同学背景：基本来自国内 Top 985 数学系前2-30%，GPA 3.7-3.9 (芝大这边 3.8 左右)。雅思在美国认可度不高，建议考托福（最好100+）。</span></p></li></ul><h3 id='苗语'><strong><span>苗语</span></strong></h3><ul><li><p><span>本科：广义大学（推测）。</span></p></li><li><p><span>申请方向：CS 或 ECE。</span></p></li><li><p><span>录取情况：佐治亚理工学院（Georgia Tech）CS（最好）、加州大学圣地亚哥分校（UCSD）CS。</span></p></li><li><p><span>申请背景：1段 CS part-time，1段 CS 实习，1个数据相关的 Lab Assistant 实习。2段科研（1数学1 CS）。1篇水会论文。标化高：GRE 325+，雅思 7.5。</span></p></li></ul><h2 id='项目介绍与亮点推荐'><strong><span>项目介绍与亮点推荐</span></strong></h2><h3 id='南加州大学uscece'><strong><span>南加州大学（USC）ECE</span></strong></h3><ul><li><p><span>录取门槛相对低。</span></p></li><li><p><span>学习体验好，第一学期可少选课适应。</span></p></li><li><p><span>作业量大，但可自选 Cs 课程，与 CS 课程设置无异。</span></p></li><li><p><span>可找工作（主要方向）或通过联系教授转博。</span></p></li><li><p><span>每学期有校企合作项目。</span></p></li><li><p><span>安全，饮食生活与国内差距不大（夜间少出门）。</span></p></li></ul><h3 id='加州大学圣塔芭芭拉分校ucsb统计学博士'><strong><span>加州大学圣塔芭芭拉分校（UCSB）统计学（博士）</span></strong></h3><ul><li><p><span>系里有两位业界非常出名的教授（印度、法国教授），很多学生慕名而来（包括清北、港中文、浙大等）。</span></p></li><li><p><span>就业前景好，学生拿到头部对冲基金、量化分析 Offer。</span></p></li><li><p><span>生活好，圣巴巴拉安全（黑人少，老墨守规矩友好）。</span></p></li><li><p><span>博士生学费低（100刀/年活动费），宿舍优先供给（800刀/月），洗衣烘干免费，公交免费。</span></p></li><li><p><span>生活成本：自炊一周200刀左右。</span></p></li><li><p><strong><span>宝藏项目推荐：</span></strong><span>  UCSB 数学与统计系硕士。TA 机会多（几乎每个硕士都有），学费有豁免（约交1.5万刀/年），可分到宿舍。该系计算机也很强。</span></p></li></ul><h3 id='芝加哥大学university-of-chicago应用数学硕士'><strong><span>芝加哥大学（University of Chicago）应用数学（硕士）</span></strong></h3><ul><li><p><span>项目综合性强，学生水平高（多为国内 Top 985 数学系前列）。</span></p></li><li><p><span>学业压力大（北美衡水），节奏快，作业多。</span></p></li><li><p><span>亮点：可选芝加哥 Booth 商学院的课程（用数学学费上商学院课程）。教授资源好，很多是教材作者，有诺奖得主。</span></p></li><li><p><span>缺点：非常卷，对学生要求高。</span></p></li><li><p><span>就业：读博（去哈佛、康奈尔、宾大等），或找工作（投行、科研所）。</span></p></li><li><p><span>不是实习项目。金融工程项目 (Financial Math) 更偏向找工。</span></p></li><li><p><span>生活成本高：约1.5-2万人民币/月生活费。总开销（学费+生活）约80万人民币/年。</span></p></li><li><p><span>人员氛围：学生都很卷（&quot;迷你&quot;），天天讨论问题。</span></p></li><li><p><span>不建议盲选，需做好心理准备。</span></p></li><li><p><span>其他相关项目：统计（更卷）、数据科学（DS，很强，新开，录本名额少，多给美本）、金融数学（Financial Math，学费更高，出路更好，校友资源强大，金工第一梯队是普林斯顿、MIT、CMU，芝大次之）、应用数据科学（Applied Data Science，校区不同，稍边缘，录取要求稍低，更偏找工，开销差不多）。</span></p></li><li><p><span>推荐广义同学可以试试芝大的 Ads 或金融数学（物有所值）。</span></p></li></ul><h3 id='佐治亚理工学院georgia-techcs'><strong><span>佐治亚理工学院（Georgia Tech）CS</span></strong></h3><ul><li><p><span>可找工作，也可转博。</span></p></li><li><p><span>与业界联系紧密，实习机会多（有 Co-op 选项，可休学期实习）。</span></p></li><li><p><span>Co-op 帮助尝试工作，拿 Return Offer。</span></p></li><li><p><span>时间非常灵活：找到工作可1年极速毕业，或慢慢读（3-5年都行）多尝试实习/科研。</span></p></li><li><p><span>与 UCSD 对比：UCSD 有毕业时间限制（4-6学期），找工压力大。</span></p></li><li><p><span>课程压力也大，至少4门课，作业多，但给分比广义好（美国学校比较 Soft）。</span></p></li><li><p><span>有机会申请 TA/RA 免学费并拿工资（第一学期申请不易，非美本更难）。</span></p></li><li><p><span>如果想读博，可以直接申请直博，即使学校不是顶尖。</span></p></li><li><p><span>如果找工作，学历达到 Target School 即可，不需盲目冲顶尖名校（南加大、东北大学等）。美国求职看重个人能力，面试环节多（现场做题）。</span></p></li><li><p><span>学校附近安全，有警察局。晚间可叫免费校车。</span></p></li><li><p><span>生活成本相对便宜：一顿中餐10美金（量大），快餐10美金。学费相对低（不到1.8万/学期）。房租约1000刀/月。</span></p></li><li><p><span>也有安全事件，见仁见智。</span></p></li></ul><h2 id='申请经验分享与建议'><strong><span>申请经验分享与建议</span></strong></h2><ul><li><p><strong><span>择校思路：</span></strong><span>先定方向。多申请学校（申请费不高），冲刺、匹配、保底都列出来。拿到 Offer 后再选。</span></p></li><li><p><strong><span>信息获取：</span></strong></p><ul><li><p><span>不要完全依赖中介，中介主要提供录取案例、参考资料，帮助了解学校档次和项目情况。核心材料仍需自己准备。</span></p></li><li><p><span>强烈建议自己查阅信息，如 一亩三分地 等论坛。</span></p></li><li><p><span>直接联系目标学校的在读学生，发邮件询问项目情况，大多数学生很热心。</span></p></li><li><p><span>对于想申博的学生，可以直接联系目标教授的博士生，了解教授当前的研究难点和方向。</span></p></li></ul></li><li><p><strong><span>奖学金：</span></strong><span>  在美国读硕士，需要在入学前（10月/11月）申请就读学校的奖学金。学校系统和奖学金系统分开，可先申请奖学金再交申请材料。很多同学不知道，存在信息差。拿到概率挺大。</span></p></li><li><p><strong><span>推荐信：</span></strong></p><ul><li><p><span>数学/应数方向：推荐信最重要。看重推荐教授的实力/影响力。</span></p></li><li><p><span>硬着头皮要：找成绩高的课程老师要。科研经历一般指校内。</span></p></li></ul></li><li><p><strong><span>科研经历（针对数学系）：</span></strong></p><ul><li><p><span>本科做数学科研做出成果较难，作用有限。</span></p></li><li><p><span>可在校内寻找科研机会，多问老师（包括其他专业老师）。</span></p></li><li><p><span>有些老师需要数据分析、跑代码的 RA（研究助理）工作，机会多，出成果概率比纯数学高。</span></p></li><li><p><span>可通过学校邮件通知或主动联系老师探寻机会。</span></p></li><li><p><span>广义大学发邮件通知的科研项目（如跟随 Luna, Pablo, Adam, Mariano 等老师的项目），多为一学期，每周1-2次 Meeting，老师布置任务/教知识，自己完成。</span></p></li><li><p><span>本科数学系做科研，教授知道你做不出太多东西。</span></p></li><li><p><span>比起科研成果，数学申请更看重学习背景：推荐信、学校、成绩单上的课程（课程难度和广度）。广以数学系在美国感觉相当于中等 985 数学学院水平。</span></p></li></ul></li><li><p><strong><span>CS 申请准备：</span></strong><span>  多做项目，多找实习（大厂、外企）。科研经历也需要一点，最好使用常用技术（SQL, PyTorch）。多上 CS 相关课程（C++, C, Python, 前端等）。</span></p></li><li><p><strong><span>面试：</span></strong><span>  主要在于展现自己，即使不那么优秀也要想办法表现出来。提前了解教授的研究方向，面试时可往那方面靠。</span></p></li><li><p><strong><span>GPA：</span></strong><span>  在校期间努力学习 GPA 不会太差。但不用过度焦虑刷分，应将更多时间投入科研、实习、项目。GPA 达到一定标准即可，过高作用有限。</span></p></li><li><p><strong><span>数学竞赛：</span></strong><span>  国内普通奖项作用有限，不如刷高 GPA。有用的奖项如国际奥赛等。</span></p></li><li><p><strong><span>硕士课程：</span></strong><span>  用于查漏补缺，不是走量。按需学习，不需要学得非常通透。短期内快速掌握解决特定问题所需知识即可。工作用到的知识更偏广度而非深度。</span></p></li><li><p><strong><span>美国课程特点：</span></strong><span>  有时课堂内容与作业脱节，作业需要自行寻找方法解决，考验自主学习能力。</span></p></li><li><p><strong><span>纯数学方向（不建议）：</span></strong><span>  要求更高，更卷，出路不如 CS/EE 等热门项目。性价比低。读博非常难，需要成为天才中的天才才能拿到教职。纯数 Phd 做的东西偏理论，工业界用不到。</span></p></li><li><p><strong><span>纯数学硕士（不建议）：</span></strong><span>  很多好学校不开纯数硕士，且 funding 被砍。如果想读数学相关的，不如直接申请直博。美国纯数硕士课程内容可能广义本科已覆盖，但深度更高，为 Phd 做准备。但大部分 Top 学校不设纯数硕士。</span></p></li></ul><h2 id='生活成本与安全'><strong><span>生活成本与安全</span></strong></h2><ul><li><p><strong><span>UCSB (圣巴巴拉):</span></strong><span>  很安全，生活舒适。博士生开销低。</span></p></li><li><p><strong><span>芝加哥大学 (芝加哥):</span></strong><span>  物价高。安全问题不用担心，因为课业压力太大没时间外出。人比较卷/迷。生活成本高（1.5-2万人民币/月生活费）。</span></p></li><li><p><strong><span>Georgia Tech (亚特兰大):</span></strong><span>  物价相对便宜（一顿中餐10美金）。学费相对低。学校附近安全，有警察局，晚间有校车。</span></p></li></ul><h2 id='其他建议'><strong><span>其他建议</span></strong></h2><ul><li><p><span>第一学期少报课，多刷题，适应节奏。美国课程难度大，认真学才能拿高分。</span></p></li><li><p><span>申请美国学校前明确目标：找工还是科研。找工多花精力在实习，科研多联系教授。</span></p></li><li><p><span>多利用校友资源网。</span></p></li><li><p><span>整个申请过程没那么困难，做好规划，能有满意结果，不要过度焦虑。</span></p></li></ul><p><span>--- END OF FILE Zoom meeting invitation - Qingxia ZHANG 张清霞的Zoom会议 - Notes.md ---</span></p></div></div>
+
+<script>(function(){var e=document.body.parentElement,t=[],n=null,i=document.body.classList.contains("typora-export-collapse-outline"),r=function(e,t,n){document.addEventListener(e,function(e){if(!e.defaultPrevented)for(var i=e.target;i&&i!=this;i=i.parentNode)if(i.matches(t)){!1===n.call(i,e)&&(e.preventDefault(),e.stopPropagation());break}},!1)};function o(){return e.scrollTop}r("click",".outline-expander",function(e){var t=this.closest(".outline-item-wrapper").classList;return t.contains("outline-item-open")?t.remove("outline-item-open"):t.add("outline-item-open"),d(),!1}),r("click",".outline-item",function(e){var t=this.querySelector(".outline-label");if(location.hash="#"+t.getAttribute("href"),i){var n=this.closest(".outline-item-wrapper").classList;n.contains("outline-item-open")||n.add("outline-item-open"),c(),n.add("outline-item-active")}});var a,s,l=function(){var e=o();n=null;for(var i=0;i<t.length&&t[i][1]-e<60;i++)n=t[i]},c=function(){document.querySelectorAll(".outline-item-active").forEach(e=>e.classList.remove("outline-item-active")),document.querySelectorAll(".outline-item-single.outline-item-open").forEach(e=>e.classList.remove("outline-item-open"))},d=function(){if(n){c();var e=document.querySelector('.outline-label[href="#'+(CSS.escape?CSS.escape(n[0]):n[0])+'"]');if(e)if(i){var t=e.closest(".outline-item-open>ul>.outline-item-wrapper");if(t)t.classList.add("outline-item-active");else{for(var r=(e=e.closest(".outline-item-wrapper")).parentElement.closest(".outline-item-wrapper");r;)r=(e=r).parentElement.closest(".outline-item-wrapper");e.classList.add("outline-item-active")}}else e.closest(".outline-item-wrapper").classList.add("outline-item-active")}};window.addEventListener("scroll",function(e){a&&clearTimeout(a),a=setTimeout(function(){l(),d()},300)});var u=function(){s=setTimeout(function(){!function(){t=[];var e=o();document.querySelector("#write").querySelectorAll("h1, h2, h3, h4, h5, h6").forEach(n=>{var i=n.getAttribute("id");t.push([i,e+n.getBoundingClientRect().y])})}(),l(),d()},300)};window.addEventListener("resize",function(e){s&&clearTimeout(s),u()}),u()})();</script></body>
+</html>

@@ -1,5 +1,13 @@
 # § 申研与职业发展
 
+## 0. Career讲座
+
+-   [2025 数学系校友专场](./career-lectures/2025-mcs-schoolfellow.html)
+-   [2025届申研经验分享会](./career-lectures/2025-5-7-apply.html)
+-   [2025.6.7 升研升博指导会](./career-lectures/2025-6-7-apply.html)
+-   [2025数学系升学去向](./career-lectures/2025-mcs-outcome.html)
+-   [2025.3.6 雅思讲座会议笔记](./career-lectures/2025-3-6-IELTS.html)
+
 ## 1. 几大排名侧重点
 
 |   排名   | 特点                                                         |
@@ -285,4 +293,7 @@ pie showData
 
 -   connection（导师间互相推荐）> 推荐信 > 科研经验 > GPA成绩 > 语言、GRE等
 
-‍
+
+
+## (8) Extra Resources
+

@@ -1,6 +1,6 @@
 # Summary
 
-- [前言](./preface/preface.md)
+- [序言](./preface.md)
 
 ---
 
@@ -10,14 +10,39 @@
 
 ---
 
-- [MCS课程概述](./part02/mcs-courses.md)
-- [数学课程简介](./part02/math/math-courses-intro.md)
-    - [数学学习资源](./part02/math/math-resources.md)
-    - [数学课程评析](./part02/math/math-courses-remarks.md)
-- [计算机课程简介](./part02/cs/cs-courses-intro.md)
-    - [计算机学习资源](./part02/cs/cs-resources.md)
-    - [计算机课程评析](./part02/cs/cs-courses-remarks.md)
+- [MCS课程概述](./part02/mcs-courses-intro.md)
+
+- [数学课程简介](./part02/math/intro.md)
+    - [数学学习资源](./part02/math/resources.md)
+    - [数学课程评析](./part02/math/remarks.md)
+        - [PRE-ACADAMIC SEMESTER (预备学期)](./part02/math/remarks/prep.md)
+        - [104002 - BASIC CONCEPTS OF MATHEMATICS](./part02/math/remarks/discrete/basic.md)
+        - [104195 - INFINITESIMAL CALCULUS 1](./part02/math/remarks/analysis/infi1.md)
+        - [104281 - INFINITESIMAL CALCULUS 2](./part02/math/remarks/analysis/infi2.md)
+        - [104066 - ALGEBRA A](./part02/math/remarks/algebra/alg-a.md)
+        - [104168 - ALGEBRA B](./part02/math/remarks/algebra/alg-b.md)
+        - [104286 - COMBINATORICS](./part02/math/remarks/discrete/combi.md)
+        - [104285 - ORDINARY DIFFERENTIAL EQUATIONS A](./part02/math/remarks/applied/ode.md)
+    
+- [计算机课程简介](./part02/cs/intro.md)
+    - [计算机学习资源](./part02/cs/resources.md)
+    
+    - [计算机课程评析](./part02/cs/remarks.md)
+      - [104814 - Introduction to Computer Science M](./part02/cs/remarks/prog-languages/intro-cs.md)
+      - [104824 - Introduction to Systems Programming](./part02/cs/remarks/prog-languages/intro-sys.md)
+      - [104918 - Data Structures 1](./part02/cs/remarks/algorithms/ds1.md)
+      - [104291 - Combinatorial Algorithms](./part02/cs/remarks/algorithms/combi-algos.md)
+      - [104952 - Digital Systems and  Computer Structure](./part02/cs/remarks/systems/digital.md)
+      - [104818 - Computer Organization and Programming](./part02/cs/remarks/systems/org.md)
+      - [104823 - Operating Systems](./part02/cs/remarks/systems/os.md)
+      - [Embedded Systems 嵌入式系统](./part02/cs/remarks/other/embedded.md)
+      - [Computer Graphics & Rendering 计算机图形学与渲染](./part02/cs/remarks/other/graphics.md)
 
 ---
 
 - [申研与职业发展](./part03/apply-career.html)
+    - [2025 数学系校友专场](./part03/career-lectures/2025-mcs-schoolfellow.html)
+    - [2025届申研经验分享会](./part03/career-lectures/2025-5-7-apply.html)
+    - [2025.6.7 升研升博指导会](./part03/career-lectures/2025-6-7-apply.html)
+    - [2025数学系升学去向](./part03/career-lectures/2025-mcs-outcome.html)
+    - [2025.3.6 雅思讲座会议笔记](./part03/career-lectures/2025-3-6-IELTS.html)
