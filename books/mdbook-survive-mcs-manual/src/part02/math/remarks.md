@@ -2,9 +2,9 @@
 
 ## 0. Prep-Semster 预备学期
 
-| Code |                         Course Name                          | Type | Credits |
-| :--: | :----------------------------------------------------------: | :--: | :-----: |
-| Prep | [PRE-ACADAMIC SEMESTER (预备学期)](./math-courses-remarks/prep.md) | PCC  |    0    |
+| Code |                      Course Name                      | Type | Credits |
+| :--: | :---------------------------------------------------: | :--: | :-----: |
+| Prep | [PRE-ACADAMIC SEMESTER (预备学期)](./remarks/prep.md) | PCC  |    0    |
 
 ## 1. Analysis 分析
 
