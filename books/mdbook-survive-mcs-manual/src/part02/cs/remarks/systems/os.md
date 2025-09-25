@@ -7,7 +7,7 @@
 -   **Difficulty 难度 :** ★
 -   **Languages 语言 :** TODO
 -   **Prerequisite 前置课程 :**
-    -   [104818 - Computer Organization and Programming](./104818.md)
+    -   [104818 - Computer Organization and Programming](./org.md)
 
 
 ## 2. Recomanded Resources 推荐资源
