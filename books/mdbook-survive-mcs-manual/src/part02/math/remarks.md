@@ -38,9 +38,9 @@
 |  Code  |             Course Name              | Type | Credits |
 | :----: | :----------------------------------: | :--: | :-----: |
 | 104002 | [BASIC CONCEPTS IN MATHEMATICS](./remarks/discrete/basic.md) | PCC  | 2.5 |
-| 104286 | [COMBINATORICS](./remarks/discrete/combi.md) | PCC  | 2.5 |
 | 104293 |            SET THEORY            | PCC  | 2.5 |
-| 104291 |    COMBINATORIAL ALGORITHMS      | PCC  | 3.5 |
+| 104286 | [COMBINATORICS](./remarks/discrete/combi.md) | PCC  | 2.5 |
+| 104291 |    [COMBINATORIAL ALGORITHMS](../cs/remarks/algorithms/combi-algos.md)    | PCC  | 3.5 |
 | 106156 |       MATHEMATICAL LOGIC         | PCC  | 3 |
 
 ## 4. Applied Math 应用数学
@@ -49,9 +49,9 @@
 | :----: | :----------------------------------------------------------: | :--: | :-----: |
 | 104285 | [ORDINARY DIFFERENTIAL EQUATIONS A](./remarks/applied/ode.md) | PCC  |   3.5   |
 | 104222 |                      PROBABILITY THEORY                      | PCC  |   3.5   |
-| 106434 |                   MATHEMATICAL STATISTICS                    |  EM  |   3.5   |
 | 104294 |              INTRODUCTION TO NUMERICAL ANALYSIS              | PCC  |    5    |
 | 104192 |             INTRODUCTION TO APPLIED MATHEMATICS              | PCC  |    3    |
+| 106434 |                   MATHEMATICAL STATISTICS                    |  EM  |   3.5   |
 | 104030 |            INT. TO PARTIAL DIFFERENTIAL EQUATIONS            |  EM  |   3.5   |
 | 114071 |                          PHYSICS 1M                          | PCC  |   3.5   |
 | 114052 |                          PHYSICS 2                           | PCC  |   3.5   |

@@ -1,21 +1,19 @@
-# § 计算机课程简介
+# § 计算机课程介绍
 
 ## 1. MCS的计算机课程特点
 
 -   **内容浓缩 :** 虽然CS课程的学分少，但经常一门课包含多种语言，多层面的知识。
-
 -   **作业次数少而精 :** 大部份计算机课程的作业都只有3-4次，单次作业不是题量大就是难度大。
-
 -   **Linux !!!**
 
     -   几乎所有课程都是基于Linux平台进行教学的，特别是涉及计算机底层架构的课程。
 
     -   强烈推荐在个人电脑上安装可运行的Linux发行版(wsl, Ubuntu等等)，并熟悉Linux的基本命令操作。
-
 -   **Mathematics vs. Computer Science**
 
     -   **随时与计算机沟通 :** 与数学证明的过程相比，学习CS的方便之处是你可以随时让计算机告诉你你写的过程是不是成立的。
-    -   **Learn Math with CS :** 可以试着使用计算机的方法让数学知识生动起来。比如[Donut math: how donut.c works](https://www.a1k0n.net/2011/07/20/donut-math.html), [NetworkX]().
+    -   **Learn Math with CS :** 可以试着使用计算机的方法让数学知识生动起来。
+        比如[Donut math: how donut.c works](https://www.a1k0n.net/2011/07/20/donut-math.html), [NetworkX]().
     -   **Enpower CS with Math :** 许多计算机问题本质上是由不同领域的数学问题发展而来，如何从优化既有代码即可以从计算机架构方面着手（比如考虑多线程并行），也可以从支撑代码背后的数学原理方面考虑。
 
 ## 2. 学习建议

@@ -5,14 +5,14 @@
 ---
 
 -   [欢迎来到MCS](./part01/welcome/welcome.md)
-- [学术规则介绍](./part01/regulation/regulation.html)
-- [学习方法与心得](./part01/experience/experience.md)
+-   [学术规则介绍](./part01/regulation/regulation.html)
+-   [学习方法与心得](./part01/experience/experience.md)
 
 ---
 
 - [MCS课程概述](./part02/mcs-courses-intro.md)
 
-- [数学课程简介](./part02/math/intro.md)
+- [数学课程介绍](./part02/math/intro.md)
     - [数学学习资源](./part02/math/resources.md)
     - [数学课程评析](./part02/math/remarks.md)
         - [PRE-ACADAMIC SEMESTER (预备学期)](./part02/math/remarks/prep.md)
@@ -23,10 +23,10 @@
         - [104168 - ALGEBRA B](./part02/math/remarks/algebra/alg-b.md)
         - [104286 - COMBINATORICS](./part02/math/remarks/discrete/combi.md)
         - [104285 - ORDINARY DIFFERENTIAL EQUATIONS A](./part02/math/remarks/applied/ode.md)
-    
-- [计算机课程简介](./part02/cs/intro.md)
+
+- [计算机课程介绍](./part02/cs/intro.md)
     - [计算机学习资源](./part02/cs/resources.md)
-    
+
     - [计算机课程评析](./part02/cs/remarks.md)
       - [104814 - Introduction to Computer Science M](./part02/cs/remarks/prog-languages/intro-cs.md)
       - [104824 - Introduction to Systems Programming](./part02/cs/remarks/prog-languages/intro-sys.md)

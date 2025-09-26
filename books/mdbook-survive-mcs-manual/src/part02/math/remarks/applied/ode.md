@@ -7,6 +7,7 @@
 -   **Difficulty 难度 :** ★★★
 -   **Prerequisite 前置课程 :** 
     -   [104168 - ALGEBRA B](../algebra/alg-b.md)
+    -   [104281 - INFINITESIMAL CALCULUS 2](../analysis/infi2.md)
 
 
 ## 2. Recomanded Resources 推荐资源

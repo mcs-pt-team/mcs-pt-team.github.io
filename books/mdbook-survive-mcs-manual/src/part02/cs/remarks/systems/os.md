@@ -7,6 +7,7 @@
 -   **Difficulty 难度 :** ★
 -   **Languages 语言 :** TODO
 -   **Prerequisite 前置课程 :**
+    -   [104918 - Data Structures 1](../algorithms/ds1.md)
     -   [104818 - Computer Organization and Programming](./org.md)
 
 

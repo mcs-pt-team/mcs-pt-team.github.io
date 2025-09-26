@@ -7,6 +7,7 @@
 -   **Difficulty 难度 :** ★★★★
 -   **Languages 语言 :** Java
 -   **Prerequisites 前置课程 :** 
+    -   [104824 - Introduction to Systems Programming](../prog-languages/intro-sys.md)
     -   [104286 - COMBINATORICS](../../../math/remarks/discrete/combi.md)
 
 
