@@ -11,7 +11,10 @@
 
 ## 2. Recomanded Resources 推荐资源
 
--   TODO
+-   [GTIIT Panapto](https://panopto.gtiit.edu.cn/Panopto/Pages/Home.aspx)
+    -   [Infinitesimal Calculus 2 - Tutorial - 21 Winter](https://panopto.gtiit.edu.cn/Panopto/Pages/Sessions/List.aspx#folderID=%223bd87471-081b-49ed-b1cf-adbb0052d45a%22&maxResults=250)
+    -   [Differential and Integral Calculus 2 - international](https://panopto.gtiit.edu.cn/Panopto/Pages/Sessions/List.aspx#folderID=%22e8e0b72b-6ba0-4b8c-b666-ab8f0036f3c5%22&folderQuery=%22Calculus%22&sortColumn=0&sortAscending=true&maxResults=250)
+
 
 ## 3. Contributed Learning Tips 学习方法投稿
 
@@ -19,4 +22,4 @@
 
 ## 4. Notes Sharing 笔记分享
 
--   https://note.etalib.space
+-   @YUE SHI: https://note.etalib.space

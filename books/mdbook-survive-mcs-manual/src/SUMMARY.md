@@ -22,8 +22,9 @@
         - [104066 - ALGEBRA A](./part02/math/remarks/algebra/alg-a.md)
         - [104168 - ALGEBRA B](./part02/math/remarks/algebra/alg-b.md)
         - [104286 - COMBINATORICS](./part02/math/remarks/discrete/combi.md)
-        - [104285 - ORDINARY DIFFERENTIAL EQUATIONS A](./part02/math/remarks/applied/ode.md)
-
+        - [104285 - ORDINARY DIFFERENTIAL EQUATIONS A](./part02/math/remarks/analysis/ode.md)
+        - [104122 - FUNCTIONS THEORY 1](./part02/math/remarks/analysis/function.md)
+    
 - [计算机课程介绍](./part02/cs/intro.md)
     - [计算机学习资源](./part02/cs/resources.md)
 

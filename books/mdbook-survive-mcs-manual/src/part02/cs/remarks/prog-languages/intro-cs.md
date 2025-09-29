@@ -22,11 +22,11 @@
 
 ## 3. Contributed Learning Tips 学习方法投稿
 
--   @mcsptteam (e-mail: <mcsptteam@gmail.com>)
+-   @mcsptteam <mcsptteam@gmail.com>
 
     >   熟悉Linux命令行指令，熟悉gcc的基本使用方法，以及C语言最基本的语法。
 
--   @Zixua-Huang (e-mail: <huang14145@gtiit.edu.cn>)
+-   @Zixua-Huang <huang14145@gtiit.edu.cn>
 
     >-   这门课程一开始会教点简单的**unix-like操作系统命令行操作**，随后就是**c语言教学**。教学课本则是c语言这门语言的两位开发者本人的书 《The C Programming Language》 K&R 从基本语法一路学习到指针之前的内容（不包含指针）， 重点在于数组操作。
     >

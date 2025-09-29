@@ -189,7 +189,21 @@
 </ul>
 <h2 id="2-recomanded-resources-推荐资源"><a class="header" href="#2-recomanded-resources-推荐资源">2. Recomanded Resources 推荐资源</a></h2>
 <ul>
-<li>TODO</li>
+<li>
+<p><a href="https://panopto.gtiit.edu.cn/Panopto/Pages/Home.aspx">GTIIT Panapto</a></p>
+<ul>
+<li><a href="https://panopto.gtiit.edu.cn/Panopto/Pages/Sessions/List.aspx#folderID=%22a3307669-8cf3-42dc-aa0e-ab8b00517416%22&amp;view=1&amp;maxResults=250&amp;folderQuery=%22algebra%22">Algebra 1M - Interantional</a></li>
+</ul>
+</li>
+<li>
+<p><a href="https://christangdt.home.blog/algebra/linear-algebra-hoffman-kunze-2ed/">城南讲马堂 - Linear Algebra [Hoffman &amp; Kunze] (2ed) Solution</a></p>
+</li>
+<li>
+<p><a href="https://linear.axler.net">Linear Algebra Done Right, 4th Ed.</a></p>
+<ul>
+<li><a href="https://linear.axler.net/LADR4e.pdf">英文版</a> <a href="https://linear.axler.net/LADR4eChinese.pdf">中文版</a></li>
+</ul>
+</li>
 </ul>
 <h2 id="3-contributed-learning-tips-学习方法投稿"><a class="header" href="#3-contributed-learning-tips-学习方法投稿">3. Contributed Learning Tips 学习方法投稿</a></h2>
 <ul>
@@ -229,6 +243,22 @@
 
         </div>
 
+        <!-- Livereload script (if served using the cli tool) -->
+        <script>
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
 
 
 

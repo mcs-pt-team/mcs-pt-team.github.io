@@ -27,11 +27,11 @@
 
 ## 3. Contributed Learning Tips 学习方法投稿
 
--   @mcsptteam (e-mail: <mcsptteam@gmail.com>)
+-   @mcsptteam <mcsptteam@gmail.com>
 
     >   先从Java入手，掌握面向对象编程(OOP)的基本原则，再迁移到C++和Python上。
 
--   @Zixuan-Huang (e-mail: <huang14145@gtiit.edu.cn>)
+-   @Zixuan-Huang <huang14145@gtiit.edu.cn>
 
     >   这门课结构内容其实大改过，所以分改版前和改版后进行说明。 
     >

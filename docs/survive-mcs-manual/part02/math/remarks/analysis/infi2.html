@@ -189,7 +189,12 @@
 </ul>
 <h2 id="2-recomanded-resources-推荐资源"><a class="header" href="#2-recomanded-resources-推荐资源">2. Recomanded Resources 推荐资源</a></h2>
 <ul>
-<li>TODO</li>
+<li><a href="https://panopto.gtiit.edu.cn/Panopto/Pages/Home.aspx">GTIIT Panapto</a>
+<ul>
+<li><a href="https://panopto.gtiit.edu.cn/Panopto/Pages/Sessions/List.aspx#folderID=%223bd87471-081b-49ed-b1cf-adbb0052d45a%22&amp;maxResults=250">Infinitesimal Calculus 2 - Tutorial - 21 Winter</a></li>
+<li><a href="https://panopto.gtiit.edu.cn/Panopto/Pages/Sessions/List.aspx#folderID=%22e8e0b72b-6ba0-4b8c-b666-ab8f0036f3c5%22&amp;folderQuery=%22Calculus%22&amp;sortColumn=0&amp;sortAscending=true&amp;maxResults=250">Differential and Integral Calculus 2 - international</a></li>
+</ul>
+</li>
 </ul>
 <h2 id="3-contributed-learning-tips-学习方法投稿"><a class="header" href="#3-contributed-learning-tips-学习方法投稿">3. Contributed Learning Tips 学习方法投稿</a></h2>
 <ul>
@@ -197,7 +202,7 @@
 </ul>
 <h2 id="4-notes-sharing-笔记分享"><a class="header" href="#4-notes-sharing-笔记分享">4. Notes Sharing 笔记分享</a></h2>
 <ul>
-<li>https://note.etalib.space</li>
+<li>@YUE SHI: https://note.etalib.space</li>
 </ul>
 
                     </main>
@@ -229,6 +234,22 @@
 
         </div>
 
+        <!-- Livereload script (if served using the cli tool) -->
+        <script>
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
 
 
 

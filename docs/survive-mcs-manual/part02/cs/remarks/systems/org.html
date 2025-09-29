@@ -193,7 +193,7 @@
 <li><em>Computer Systems: A Programmer’s Perspective, Third Edition (CSAPP)</em>
 <ul>
 <li><a href="https://csapp.cs.cmu.edu">课程官网</a> <a href="https://csapp.cs.cmu.edu"><strong>配套资源</strong></a></li>
-<li><a href="https://z-library.sk/book/28525133/62ea78/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F.html"><strong>中文版</strong></a> <a href="https://hansimov.gitbook.io/csapp">中文重译版</a> <a href="https://z-library.sk/book/19191715/956b43/computer-systems-a-programmers-perspective-third-edition-global-edition.html"><strong>英文版</strong></a></li>
+<li><a href="https://z-library.sk/book/28525133/62ea78/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F.html"><strong>中文版</strong></a> <a href="https://hansimov.gitbook.io/csapp">社区翻译版</a> <a href="https://z-library.sk/book/19191715/956b43/computer-systems-a-programmers-perspective-third-edition-global-edition.html"><strong>英文版</strong></a></li>
 </ul>
 </li>
 <li><em>Introduction to Computer Organization: An Under the Hood Look at Hardware and x86-64 Assembly</em>
@@ -210,13 +210,31 @@
 <h2 id="3-contributed-learning-tips-学习方法投稿"><a class="header" href="#3-contributed-learning-tips-学习方法投稿">3. Contributed Learning Tips 学习方法投稿</a></h2>
 <ul>
 <li>
-<p>@mcsptteam (e-mail: <a href="mailto:mcsptteam@gmail.com">mcsptteam@gmail.com</a>)</p>
+<p>@mcsptteam <a href="mailto:mcsptteam@gmail.com">mcsptteam@gmail.com</a></p>
 <blockquote>
 <p>课程大致可以分为两部分：Linux系统system programming和x86汇编。读CSAPP写简单的程序掌握Linux的系统编程接口与<code>gcc</code>和C语言的进阶知识；x86部分类似z80的学习方法，建议可以多通过<code>objdump</code>工具对比汇编语言和C语言异同。</p>
 </blockquote>
 </li>
 <li>
-<p>TODO</p>
+<p>@Zixuan HUANG <a href="mailto:huang14145@gtiit.edu.cn">huang14145@gtiit.edu.cn</a></p>
+<blockquote>
+<p>这门课大概可以两个部分：<strong>Intel x86-64 汇编 AT&amp;T 语法教学</strong> + <strong>计算机虚拟内存原理讲解</strong></p>
+<ul>
+<li>
+<p>汇编部分可以的话需要能自己用汇编写一些简单的算法，比如点乘叉乘之类的。是在记不住不要紧，至少得能看懂，比如看到JMP族指令你得知道他在干什么。期末考试汇编大概率不会让你真的手写，而是让你填空，选择之类的。 其中虚拟内存部分是重点，需要真真切切地理解概念。 如果感觉上课讲虚拟内存部分听不懂可以看看这个网站：<a href="https://hansimov.gitbook.io/csapp/part2/ch09-virtual-memory/9.1-physical-and-virtual-addressing">csapp 虚拟内存原理</a> 如果感觉上课时听不懂虚拟内存部分，请花4-6小时认真看完这个网站的第九章，保证你能对虚拟内存大彻大悟。同时务必把这本线上书的第九章所有练习认真独立做完，例子务必要理解，因为期末考试的试题就和这些练习差不多。</p>
+</li>
+<li>
+<p>再次强调<strong>虚拟内存部分请务必理解其中的原理，因为后面104823操作系统直接默认了你对虚拟内存熟烂于心，而且操作系统也会考，甚至还会有让你实现虚拟内存的lab。</strong></p>
+</li>
+<li>
+<p>如果上完这门课对于逆向工程或者是汇编有兴趣的话，可以尝试挑战CSAPP<a href="https://csapp.cs.cmu.edu/3e/labs.html">配套实验</a>的<a href="https://csapp.cs.cmu.edu/3e/bomb.tar">二进制拆弹实验</a>和<a href="https://csapp.cs.cmu.edu/3e/target1.tar">缓冲区攻击实验</a> 同时实验工具链推荐使用NSA的<a href="https://github.com/NationalSecurityAgency/ghidra">Ghidra</a>, 这是一个非常实用的逆向工程软件框架，用过都说好。 我自己做完这两个lab感觉还是受益匪浅的。温馨提示，这两个lab最后一题写不出的话不用强求自己，因为真的很难。</p>
+<p>同时如果对于简单的逆向工程感兴趣的话可以看看这个网站：<a href="https://crackmes.one/">Crackme</a>,里面有非常多的逆向工程材料可以提供练手机会。甚至有一些就是现有软件的反破解设计思路demo，放上去等着别人来破解看看自己的设计是否有缺陷。</p>
+</li>
+<li>
+<p>需要注意的是，反编译或者说逆向工程是一个非常需要谨慎选择的方向，千万不要觉得自己会使ida，做完几个crackme之后就觉得自己牛逼了，想要读逆向工程研究生，想要当大黑客。逆向工程研究可以说是天坑，需要投入大量时间与精力，对基本功要求极高。这些crackme做着玩当作兴趣爱好可以，但是如果想要往这方向发展请千万务必了解业内详情，走访业内人士，三思而后行，不要自大膨胀，被这些雕虫小技骗走了魂。</p>
+</li>
+</ul>
+</blockquote>
 </li>
 </ul>
 <h2 id="4-notes-sharing-笔记分享"><a class="header" href="#4-notes-sharing-笔记分享">4. Notes Sharing 笔记分享</a></h2>
@@ -253,6 +271,22 @@
 
         </div>
 
+        <!-- Livereload script (if served using the cli tool) -->
+        <script>
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
 
 
 
