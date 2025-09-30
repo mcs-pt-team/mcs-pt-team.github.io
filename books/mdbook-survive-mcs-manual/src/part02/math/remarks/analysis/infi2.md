@@ -22,4 +22,4 @@
 
 ## 4. Notes Sharing 笔记分享
 
--   @YUE SHI: https://note.etalib.space
+-   @Yue-Shi: https://note.etalib.space

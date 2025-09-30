@@ -18,7 +18,7 @@
 -   *Havard CS50*
     -   [**课程网站**](https://cs50.harvard.edu/x/)
 -   [**Leetcode - 编程基础 0 到 1**](https://leetcode.cn/studyplan/programming-skills/)：用C语言过完一遍，基础就差不多可以了
--   [**PAT (Basic Level) Practice**]()：用C语言试试写前三十道题，难度稍微高一些
+-   [**PAT (Basic Level) Practice**](https://pintia.cn/problem-sets/994805260223102976/exam/problems/type/7)：用C语言试试写前三十道题，难度稍微高一些
 
 ## 3. Contributed Learning Tips 学习方法投稿
 

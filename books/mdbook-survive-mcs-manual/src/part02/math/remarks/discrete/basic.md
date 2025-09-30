@@ -19,4 +19,4 @@
 
 ## 4. Notes Sharing 笔记分享
 
--   TODO
+-   @Yue-Shi: https://note.etalib.space
