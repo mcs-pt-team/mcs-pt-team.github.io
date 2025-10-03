@@ -2,11 +2,9 @@
 
 ## 1. Basic Information 基本信息
 
--   **Credits 学分 :** 0
--   **Type 类型 :** PCC
--   **Difficulty 难度 :** ★
--   **Prerequisite 前置课程 :** High School Math
-
+| Credits 学分 | Type 类型 | Difficulty 参考难度 | Prerequisites 前置课程 |
+| :----------: | :-------: | :-----------------: | :--------------------: |
+|      0       |    PCC    |          ★          |    High School Math    |
 
 ## 2. Recomanded Resources 推荐资源
 

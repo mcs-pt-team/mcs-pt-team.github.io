@@ -2,12 +2,9 @@
 
 ## 1. Basic Information 基本信息
 
--   **Credits 学分 :** 5
--   **Type 类型 :** PCC
--   **Difficulty 难度 :** ★★★
--   **Prerequisite 前置课程 :** 
-    -   [104195 - INFINITESIMAL CALCULUS 1](./infi1.md)
-
+| Credits 学分 | Type 类型 | Difficulty 参考难度 |             Prerequisites 前置课程              |
+| :----------: | :-------: | :-----------------: | :---------------------------------------------: |
+|      5       |    PCC    |         ★★          | [104195 - INFINITESIMAL CALCULUS 1](./infi1.md) |
 
 ## 2. Recomanded Resources 推荐资源
 
@@ -22,4 +19,4 @@
 
 ## 4. Notes Sharing 笔记分享
 
--   @Yue-Shi: https://note.etalib.space
+-   @Yue-SHI: <https://note.etalib.space>

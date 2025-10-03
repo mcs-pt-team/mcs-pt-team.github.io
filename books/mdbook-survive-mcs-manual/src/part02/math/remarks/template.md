@@ -2,12 +2,9 @@
 
 ## 1. Basic Information 基本信息
 
--   **Credits 学分 :** TODO
--   **Type 类型 :** PCC / EM
--   **Difficulty 难度 :** ★
--   **Prerequisite 前置课程 :** 
-    -   TODO
-
+| Credits 学分 | Type 类型 | Difficulty 参考难度 | Prerequisites 前置课程 |
+| :----------: | :-------: | :-----------------: | :--------------------: |
+|              | PCC / EM  |          ★          |                        |
 
 ## 2. Recomanded Resources 推荐资源
 

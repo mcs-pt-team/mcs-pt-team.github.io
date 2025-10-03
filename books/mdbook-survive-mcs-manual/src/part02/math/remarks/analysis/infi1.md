@@ -2,11 +2,9 @@
 
 ## 1. Basic Information 基本信息
 
--   **Credits 学分 :** 5.5
--   **Type 类型 :** PCC
--   **Difficulty 难度 :** ★★★
--   **Prerequisite 前置课程 :**
-    -   [PRE-ACADAMIC SEMESTER (预备学期)](../prep.md)
+| Credits 学分 | Type 类型 | Difficulty 参考难度 |             Prerequisites 前置课程             |
+| :----------: | :-------: | :-----------------: | :--------------------------------------------: |
+|     5.5      |    PCC    |         ★★          | [PRE-ACADAMIC SEMESTER (预备学期)](../prep.md) |
 
 ## 2. Recomanded Resources 推荐资源
 
@@ -21,4 +19,4 @@
 
 ## 4. Notes Sharing 笔记分享
 
--   @Yue-Shi: https://note.etalib.space
+-   @Yue-SHI: <https://note.etalib.space>

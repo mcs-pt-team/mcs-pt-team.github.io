@@ -28,9 +28,11 @@
 
 ## 贡献者
 
--   @mcsptteam (MCS PT Team)
--   @Yue-SHI
--   @shawnkuo
--   @Zixuan-Huang
--   ~~广告位招租~~
+| ID            | Email / Personal-Site       |
+| :------------ | :-------------------------- |
+| @mcsptteam    | <mcsptteam@gmail.com>       |
+| @Yue-SHI      | <https://note.etalib.space> |
+| @shawnkuo     | <guo14780@gtiit.edu.cn>     |
+| @Zixuan-Huang | <huang14145@gtiit.edu.cn>   |
+| @Xiaoqi-LIU   | <xiaoqi.liuc@gmail.com>     |
 

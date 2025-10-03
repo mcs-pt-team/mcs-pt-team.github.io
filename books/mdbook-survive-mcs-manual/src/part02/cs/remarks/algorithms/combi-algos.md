@@ -2,13 +2,9 @@
 
 ## 1. Basic Information 基本信息
 
--   **Credits :** 3.5
--   **Type 类型 :** PCC
--   **Difficulty :** ★★★
--   **Languages :** Python
--   **Prerequisites :** 
-    -   [104286 - COMBINATORICS](../../../math/remarks/discrete/combi.md)
-
+| Credits 学分 | Type 类型 | Difficulty 参考难度 |                    Prerequisites 前置课程                    |
+| :----------: | :-------: | :-----------------: | :----------------------------------------------------------: |
+|     3.5      |    PCC    |         ★★★         | [104286 - COMBINATORICS](../../../math/remarks/discrete/combi.md) |
 
 ## 2. Recomanded Resources 推荐资源
 
@@ -23,7 +19,7 @@
 
 ## 3. Contributed Learning Tips 学习方法投稿
 
--   @mcsptteam (e-mail: <mcsptteam@gmail.com>)
+-   @mcsptteam <mcsptteam@gmail.com>
 
     >   在掌握数学原理的基础之上，把每个算法实现出来。图论部分建议学习Python的[NetworkX](https://networkx.org)，将图可视化出来。
 

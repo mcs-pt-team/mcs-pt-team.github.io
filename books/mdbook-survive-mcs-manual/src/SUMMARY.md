@@ -14,20 +14,36 @@
 
 - [数学课程介绍](./part02/math/intro.md)
     - [数学学习资源](./part02/math/resources.md)
+    
     - [数学课程评析](./part02/math/remarks.md)
+    
         - [PRE-ACADAMIC SEMESTER (预备学期)](./part02/math/remarks/prep.md)
-        - [104002 - BASIC CONCEPTS OF MATHEMATICS](./part02/math/remarks/discrete/basic.md)
         - [104195 - INFINITESIMAL CALCULUS 1](./part02/math/remarks/analysis/infi1.md)
         - [104281 - INFINITESIMAL CALCULUS 2](./part02/math/remarks/analysis/infi2.md)
-        - [104066 - ALGEBRA A](./part02/math/remarks/algebra/alg-a.md)
-        - [104168 - ALGEBRA B](./part02/math/remarks/algebra/alg-b.md)
-        - [104286 - COMBINATORICS](./part02/math/remarks/discrete/combi.md)
         - [104285 - ORDINARY DIFFERENTIAL EQUATIONS A](./part02/math/remarks/analysis/ode.md)
         - [104122 - FUNCTIONS THEORY 1](./part02/math/remarks/analysis/function.md)
+        - [104165 - REAL FUNCTIONS](./part02/math/remarks/analysis/real-func.md)
+    
+        - [104066 - ALGEBRA A](./part02/math/remarks/algebra/alg-a.md)
+        - [104168 - ALGEBRA B](./part02/math/remarks/algebra/alg-b.md)
+        - [104158 - INTRODUCTION TO GROUPS](./part02/math/remarks/algebra/groups.md)
+        - [104279 - INTRODUCTION TO RINGS AND FIELDS](./part02/math/remarks/algebra/rf.md)
+        - [104280 - MODULES, RINGS AND GROUPS](./part02/math/remarks/algebra/mrg.md)
+        - [104274 - FIELDS THEORY](./part02/math/remarks/algebra/fields.md)
+    
+        - [104177 - DIFFERENTIAL GEOMETRY](./part02/math/remarks/geometry/diff-geo.md)
+    
+        - [104002 - BASIC CONCEPTS OF MATHEMATICS](./part02/math/remarks/discrete/basic.md)
+        - [104286 - COMBINATORICS](./part02/math/remarks/discrete/combi.md)
+    
+        - [104294 - INTRODUCTION TO NUMERICAL ANALYSIS](./part02/math/remarks/applied/numerical.md)
+        - [104192 - INTRODUCTION TO APPLIED MATHEMATICS](./part02/math/remarks/applied/applied-math.md)
+        - [104222 - PROBABILITY THEORY](./part02/math/remarks/applied/probability.md)
     
 - [计算机课程介绍](./part02/cs/intro.md)
+    
     - [计算机学习资源](./part02/cs/resources.md)
-
+    
     - [计算机课程评析](./part02/cs/remarks.md)
       - [104814 - Introduction to Computer Science M](./part02/cs/remarks/prog-languages/intro-cs.md)
       - [104824 - Introduction to Systems Programming](./part02/cs/remarks/prog-languages/intro-sys.md)

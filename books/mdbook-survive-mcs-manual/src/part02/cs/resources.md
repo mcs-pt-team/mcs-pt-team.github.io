@@ -23,9 +23,10 @@
 
 -   [CS自学指南](https://csdiy.wiki): 一个非常有名的自学网站，有很多外国大学的课程资料，适合针对具体内容查找
 
-    >-   @Zixuan-Huang (email: <>)
+    >   @Zixuan-Huang <huang14145@gtiit.edu.cn>
     >
-    >    可以当作一个导航，里面有很多计算机学习资源，包括课程、书籍、工具等。 但是需要注意的是里面推荐的课程极难，而且需要耗费极大时间。甚至有一些课程网站年久失修了，只推荐看看路线图，然后自己去找难度适中的课程。
+    >   可以当作一个导航，里面有很多计算机学习资源，包括课程、书籍、工具等。 但是需要注意的是里面推荐的课程极难，而且需要耗费极大时间。甚至有一些课程网站年久失修了，只推荐看看路线图，然后自己去找难度适中的课程。
+
 -   [自学计算机科学](https://github.com/izackwu/TeachYourselfCS-CN/blob/master/TeachYourselfCS-CN.md): 一个外国博主基于他的自身经历写的自学路径。
 -   [Geeksforgeeks](https://www.geeksforgeeks.org): 基本上无所不包的计算机知识网站。
 

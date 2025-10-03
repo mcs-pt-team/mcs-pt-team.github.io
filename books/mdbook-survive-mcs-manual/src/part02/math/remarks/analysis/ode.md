@@ -2,13 +2,9 @@
 
 ## 1. Basic Information 基本信息
 
--   **Credits 学分 :** 3.5
--   **Type 类型 :** PCC
--   **Difficulty 难度 :** ★★★
--   **Prerequisite 前置课程 :** 
-    -   [104168 - ALGEBRA B](../algebra/alg-b.md)
-    -   [104281 - INFINITESIMAL CALCULUS 2](../analysis/infi2.md)
-
+| Credits 学分 | Type 类型 | Difficulty 参考难度 | Prerequisites 前置课程                                       |
+| :----------: | :-------: | :-----------------: | :----------------------------------------------------------- |
+|     3.5      |    PCC    |         ★★★         | [104168 - ALGEBRA B](../algebra/alg-b.md)<br />[104281 - INFINITESIMAL CALCULUS 2](../analysis/infi2.md) |
 
 ## 2. Recomanded Resources 推荐资源
 
@@ -24,4 +20,5 @@
 
 ## 4. Notes Sharing 笔记分享
 
--   TODO
+-   @Xiaoqi-LIU <xiaoqi.liuc@gmail.com>
+    -   [ODE (Prof. Maksim Karev) 复习笔记](https://drive.google.com/file/d/1M6oVX-WAVAF4ybRQnNOf-09LZxwidPRo/view?usp=share_link)
