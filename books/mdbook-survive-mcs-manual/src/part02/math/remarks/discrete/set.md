@@ -10,7 +10,7 @@
 
 -   [(GTIIT Panapto) Set Theory - Tutorial - 20 Winter](https://panopto.gtiit.edu.cn/Panopto/Pages/Sessions/List.aspx#folderID=%228d0edca9-252d-4852-af54-ac4e00b26b99%22&maxResults=250)
 -   [(Youtube) U.C. Berkeley Math 135 - Intro to Set Theory](https://www.youtube.com/playlist?list=PLjJhPCaCziSQyON7NLc8Ac8ibdm6_iDQf)
--   *Introduction to Set Theory, Third Edition, Revised and Expanded, by Karel Hrbacek, Thomas Jech*
+-   *Introduction to Set Theory, Third Edition, Revised and Expanded, by Karel Hrbacek and Thomas Jech*
     -   [Book](https://z-library.sk/book/4984968/bba543/introduction-to-set-theory-third-edition-revised-and-expanded.html) [Solutions](https://jianfeishen.weebly.com/uploads/4/7/2/6/4726705/set-theory.pdf)
 
 
