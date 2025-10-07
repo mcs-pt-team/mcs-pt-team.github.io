@@ -6,7 +6,6 @@
 
 ## 0. 基础配置
 
--   VPN（Go ask your PT）
 -   Windows配置
     -   [安装WSL](https://drive.google.com/file/d/1lncQ8wOst4gtH4KX1_mJGaTra29pC3i9/view?usp=share_link)
     -   [安装VS-Code和Cursor](https://drive.google.com/file/d/1nnQGLOL3fDn4j9liHv9iTSnWCHLFL8t9/view?usp=share_link)

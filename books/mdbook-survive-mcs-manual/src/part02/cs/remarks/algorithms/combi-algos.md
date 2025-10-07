@@ -2,9 +2,9 @@
 
 ## 1. Basic Information 基本信息
 
-| Credits 学分 | Type 类型 | Difficulty 参考难度 |                    Prerequisites 前置课程                    |
-| :----------: | :-------: | :-----------------: | :----------------------------------------------------------: |
-|     3.5      |    PCC    |         ★★★         | [104286 - COMBINATORICS](../../../math/remarks/discrete/combi.md) |
+| Credits 学分 | Type 类型 | Difficulty 参考难度 | Languages 语言 |                    Prerequisites 前置课程                    |
+| :----------: | :-------: | :-----------------: | :------------: | :----------------------------------------------------------: |
+|     3.5      |    PCC    |         ★★★         |     Python     | [104286 - COMBINATORICS](../../../math/remarks/discrete/combi.md) |
 
 ## 2. Recomanded Resources 推荐资源
 

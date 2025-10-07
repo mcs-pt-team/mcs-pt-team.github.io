@@ -8,7 +8,7 @@
 
 ## 2. Recomanded Resources 推荐资源
 
--   TODO
+-   [(GTIIT Panaoto) Introduction to Group Theory](https://panopto.gtiit.edu.cn/Panopto/Pages/Sessions/List.aspx#folderID=%22b767a905-955f-4278-9c99-ab8d00c977de%22)
 
 ## 3. Contributed Learning Tips 学习方法投稿
 

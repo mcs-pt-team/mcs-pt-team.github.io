@@ -2,13 +2,9 @@
 
 ## 1. Basic Information 基本信息
 
--   **Credits 学分 :** 4
--   **Type 类型 :** PCC
--   **Difficulty 难度 :** ★★★
--   **Languages 语言 :** Java, C++, Python
--   **Prerequisites 前置课程 :**
-    -   [104814 - Introduction to Computer Science M](./intro-cs.md)
-
+| Credits 学分 | Type 类型 | Difficulty 参考难度 |  Languages 语言   | Prerequisites 前置课程                                       |
+| :----------: | :-------: | :-----------------: | :---------------: | ------------------------------------------------------------ |
+|      4       |    PCC    |         ★★★         | Java, C++, Python | [104814 - Introduction to Computer Science M](./intro-cs.md) |
 
 ## 2. Recomanded Resources 推荐资源
 

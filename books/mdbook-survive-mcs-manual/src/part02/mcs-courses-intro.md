@@ -12,7 +12,7 @@
 
 - 数学课程: **90 credits**
 - 计算机课程: **23.5 credits**
-- 每门课的前置课程表: [Link](https://drive.google.com/file/d/1wXd5gxXP0da5FGDxLi67bdr_EOLu18SD/view?usp=share_link)
+- 每门课的前置课程表: [MCS_Prerequisite_Course_List.pdf](https://drive.google.com/file/d/1wXd5gxXP0da5FGDxLi67bdr_EOLu18SD/view?usp=share_link)
 
 ### (2) 选修课 (PEC)
 

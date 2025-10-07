@@ -2,10 +2,9 @@
 
 ## 1. Basic Information 基本信息
 
--   **Credits 学分 :** 4
--   **Type 类型 :** PCC
--   **Difficulty 难度 :** ★★★
--   **Language 语言 :** C
+| Credits 学分 | Type 类型 | Difficulty 参考难度 | Languages 语言 | Prerequisites 前置课程 |
+| :----------: | :-------: | :-----------------: | :------------: | :--------------------- |
+|      4       |    PCC    |         ★★★         |       C        |                        |
 
 ## 2. Recommanded Resources 推荐资源
 

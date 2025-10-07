@@ -2,20 +2,15 @@
 
 ## 1. Basic Information 基本信息
 
--   **Credits 学分 :** 4.5
--   **Type 类型 :** PCC
--   **Difficulty 难度 :** ★★★★★
--   **Languages 语言 :** TODO
--   **Prerequisite 前置课程 :**
-    -   [104918 - Data Structures 1](../algorithms/ds1.md)
-    -   [104818 - Computer Organization and Programming](./org.md)
-
+| Credits 学分 | Type 类型 | Difficulty 参考难度 | Languages 语言 | Prerequisites 前置课程                                       |
+| :----------: | :-------: | :-----------------: | :------------: | :----------------------------------------------------------- |
+|     4.5      |    PCC    |        ★★★★★        |       C        | [104918 - Data Structures 1](../algorithms/ds1.md)<br />[104818 - Computer Organization and Programming](./org.md) |
 
 ## 2. Recomanded Resources 推荐资源
 
 -   *Computer Systems: A Programmer’s Perspective, Third Edition (CSAPP)*
-    -   [课程官网](https://csapp.cs.cmu.edu) [**配套资源**](https://csapp.cs.cmu.edu)
-    -   [**中文版**](https://z-library.sk/book/28525133/62ea78/深入理解计算机系统.html) [社区翻译版](https://hansimov.gitbook.io/csapp) [**英文版**](https://z-library.sk/book/19191715/956b43/computer-systems-a-programmers-perspective-third-edition-global-edition.html) 
+    -   [课程官网](https://csapp.cs.cmu.edu) [配套资源](https://csapp.cs.cmu.edu)
+    -   [中文版](https://z-library.sk/book/28525133/62ea78/深入理解计算机系统.html) [社区翻译版](https://hansimov.gitbook.io/csapp) [英文版](https://z-library.sk/book/19191715/956b43/computer-systems-a-programmers-perspective-third-edition-global-edition.html) 
 
 ## 3. Contributed Learning Tips 学习方法投稿
 

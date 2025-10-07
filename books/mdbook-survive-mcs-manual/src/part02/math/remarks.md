@@ -2,9 +2,7 @@
 
 1.   [Analysis 分析](#analysis)
 2.   [Algebra 代数](#algebra)
-
 3.   [Geometry 几何](#geometry)
-
 4.   [Discrete Mathematics 离散数学](#discrete)
 5.   [Applied Math 应用数学](#applied)
 6.   [Physics 物理](#physics)
@@ -55,7 +53,7 @@
 | :----: | :----------------------------------: | :--: | :-----: |
 | 104002 | [BASIC CONCEPTS IN MATHEMATICS](./remarks/discrete/basic.md) | PCC  | 2.5 |
 | 104286 | [COMBINATORICS](./remarks/discrete/combi.md) | PCC  | 2.5 |
-| 104293 |            SET THEORY            | PCC  | 2.5 |
+| 104293 |            [SET THEORY](./remarks/discrete/set.md)            | PCC  | 2.5 |
 | 106156 |       [MATHEMATICAL LOGIC](./remarks/discrete/logic.md)       | PCC  | 3 |
 | 104291 |    [COMBINATORIAL ALGORITHMS](../cs/remarks/algorithms/combi-algos.md)    | PCC  | 3.5 |
 

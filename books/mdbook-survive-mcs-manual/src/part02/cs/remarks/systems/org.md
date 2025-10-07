@@ -2,12 +2,9 @@
 
 ## 1. Basic Information 基本信息
 
--   **Credits 学分 :** 3
--   **Type 类型 :** PCC
--   **Difficulty 难度 :** ★★★★
--   **Languages 语言 :** x86 Assembly, C
--   **Prerequisite 前置课程 :**
-    -   [104952 - Digital Systems and  Computer Structure](./digital.md)
+| Credits 学分 | Type 类型 | Difficulty 参考难度 | Languages 语言 | Prerequisites 前置课程                                       |
+| :----------: | :-------: | :-----------------: | :------------: | :----------------------------------------------------------- |
+|      4       |    PCC    |        ★★★★         |   x86 ASM, C   | [104952 - Digital Systems and  Computer Structure](./digital.md) |
 
 ## 2. Recomanded Resources 推荐资源
 
