@@ -185,9 +185,9 @@
 <ul>
 <li><em>Digital Design and Computer Architecture</em>
 <ul>
-<li><em>MIPS Ed.</em> <a href="https://z-library.sk/book/21599455/ebadcc/%E6%95%B0%E5%AD%97%E8%AE%BE%E8%AE%A1%E5%92%8C%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84-%E5%8E%9F%E4%B9%A6%E7%AC%AC2%E7%89%88.html"><strong>中文版</strong></a> <a href="https://z-library.sk/book/2083220/99a919/digital-design-and-computer-architecture-second-edition.html"><strong>英文版</strong></a>(Tor)</li>
-<li><em>ARM Ed.</em> <a href="https://z-library.sk/book/28897151/030768/%E6%95%B0%E5%AD%97%E8%AE%BE%E8%AE%A1%E5%92%8C%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84arm%E7%89%88.html"><strong>中文版</strong></a> <a href="https://z-library.sk/book/11139294/2b94ba/digital-design-and-computer-architecture-arm-edition.html"><strong>英文版</strong></a></li>
-<li><em>RICS-V Ed.</em> <a href="https://z-library.sk/book/115709614/8c548f/%E6%95%B0%E5%AD%97%E8%AE%BE%E8%AE%A1%E5%92%8C%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84-riscv%E7%89%88-digital-design-and-computer-architecture-riscv-edition.html"><strong>中文版</strong></a> <a href="https://z-library.sk/book/27118019/0d6d06/digitaldesignandcomputerarchitecturerisc.html"><strong>英文版</strong></a></li>
+<li><em>MIPS Ed.</em>: <a href="https://z-library.sk/book/21599455/ebadcc/%E6%95%B0%E5%AD%97%E8%AE%BE%E8%AE%A1%E5%92%8C%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84-%E5%8E%9F%E4%B9%A6%E7%AC%AC2%E7%89%88.html">中文版</a>, <a href="https://z-library.sk/book/2083220/99a919/digital-design-and-computer-architecture-second-edition.html">英文版</a>(Tor)</li>
+<li><em>ARM Ed.</em>: <a href="https://z-library.sk/book/28897151/030768/%E6%95%B0%E5%AD%97%E8%AE%BE%E8%AE%A1%E5%92%8C%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84arm%E7%89%88.html">中文版</a>, <a href="https://z-library.sk/book/11139294/2b94ba/digital-design-and-computer-architecture-arm-edition.html">英文版</a></li>
+<li><em>RICS-V Ed.</em>: <a href="https://z-library.sk/book/115709614/8c548f/%E6%95%B0%E5%AD%97%E8%AE%BE%E8%AE%A1%E5%92%8C%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84-riscv%E7%89%88-digital-design-and-computer-architecture-riscv-edition.html">中文版</a>, <a href="https://z-library.sk/book/27118019/0d6d06/digitaldesignandcomputerarchitecturerisc.html">英文版</a></li>
 </ul>
 </li>
 <li><a href="https://store.steampowered.com/app/1444480/Turing_Complete/">Turing Complete - Steam Page</a></li>
@@ -195,7 +195,7 @@
 <li><a href="https://mdagois.gumroad.com/l/CODQn">Game Boy Coding Adventure (Not free)</a></li>
 <li><a href="https://rgbds.gbdev.io">RGBDS - A free assembler/linker package for the Game Boy and Game Boy Color</a>
 <ul>
-<li><a href="https://gbdev.io/gb-asm-tutorial/"><strong>GameBoy ASM Tutorial</strong></a></li>
+<li><a href="https://gbdev.io/gb-asm-tutorial/">GameBoy ASM Tutorial</a></li>
 </ul>
 </li>
 </ul>
@@ -245,6 +245,22 @@
 
         </div>
 
+        <!-- Livereload script (if served using the cli tool) -->
+        <script>
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
 
 
 

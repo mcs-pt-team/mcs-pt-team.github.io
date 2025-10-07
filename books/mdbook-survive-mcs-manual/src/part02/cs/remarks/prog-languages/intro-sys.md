@@ -8,17 +8,11 @@
 
 ## 2. Recomanded Resources 推荐资源
 
--   *Objects First with Java* 
-    -   [**中文版**]() [**英文版**](http://bookszlibb74ugqojhzhg2a63w5i2atv5bqarulgczawnbmsb6s6qead.onion/book/5335371/75cb65/objects-first-with-java-a-practical-introduction-using-bluej.html)(Through [**Tor Browser**](https://www.torproject.org/zh-CN/download/))
--   [**廖雪峰的官方网站**](https://liaoxuefeng.com)
-    -   [**Java教程**](https://liaoxuefeng.com/books/java/introduction/index.html)
-    -   [**Python教程**](https://liaoxuefeng.com/books/python/introduction/index.html)
--   *C++ How To Program, 9th Ed*
-    -   [**中文版**](https://z-library.sk/book/19198369/ddf7d0/c大学教程-第九版-c-how-to-program-ninth-edition.html?dsource=recommend) [**英文版**](https://z-library.sk/book/27617386/052022/c-how-to-program-9e.html?dsource=recommend)
--   *Introduction to Computation and Programming Using Python, 2nd Ed*
-    -   [**中文版**](https://z-library.sk/book/5760303/94f929/python编程导论第2版.html) [**英文版**](https://z-library.sk/book/3411055/5d9cfc/introduction-to-computation-and-programming-using-python-with-application-to-understanding-data.html)
--   *Python for Programmers with introductory Al case studies*
-    -   [**中文版**](https://z-library.sk/book/18259257/c7cc14/python程序设计-人工智能案例实践-2021.html) [**英文版**](https://z-library.sk/book/23050513/55d692/python-for-programmers-with-introductory-al-case-studies.html)
+-   *Objects First with Java*: [中文版](), [英文版](http://bookszlibb74ugqojhzhg2a63w5i2atv5bqarulgczawnbmsb6s6qead.onion/book/5335371/75cb65/objects-first-with-java-a-practical-introduction-using-bluej.html) ([Tor Browser](https://www.torproject.org/zh-CN/download/))
+-   [廖雪峰的官方网站](https://liaoxuefeng.com): [Java教程](https://liaoxuefeng.com/books/java/introduction/index.html), [Python教程](https://liaoxuefeng.com/books/python/introduction/index.html)
+-   *C++ How To Program, 9th Ed*: [中文版](https://z-library.sk/book/19198369/ddf7d0/c大学教程-第九版-c-how-to-program-ninth-edition.html?dsource=recommend), [英文版](https://z-library.sk/book/27617386/052022/c-how-to-program-9e.html?dsource=recommend)
+-   *Introduction to Computation and Programming Using Python, 2nd Ed*: [中文版](https://z-library.sk/book/5760303/94f929/python编程导论第2版.html), [英文版](https://z-library.sk/book/3411055/5d9cfc/introduction-to-computation-and-programming-using-python-with-application-to-understanding-data.html)
+-   *Python for Programmers with introductory Al case studies, Paul J. Deitel*: [中文版](https://z-library.sk/book/18259257/c7cc14/python程序设计-人工智能案例实践-2021.html), [英文版](https://z-library.sk/book/23050513/55d692/python-for-programmers-with-introductory-al-case-studies.html)
 
 
 ## 3. Contributed Learning Tips 学习方法投稿

@@ -183,28 +183,12 @@
 </div>
 <h2 id="2-recommanded-resources-推荐资源"><a class="header" href="#2-recommanded-resources-推荐资源">2. Recommanded Resources 推荐资源</a></h2>
 <ul>
-<li><em>The Linux Command Line: A Complete Introduction, 2nd Edition</em>
-<ul>
-<li><a href="https://z-library.sk/book/29356342/249bc8/linux%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%A4%A7%E5%85%A8%E7%AC%AC2%E7%89%88.html"><strong>中文版</strong></a> <a href="https://z-library.sk/book/3704056/b964c2/the-linux-command-line-a-complete-introduction-2nd-edition.html"><strong>英文版</strong></a></li>
-</ul>
-</li>
-<li><em>C Programming Language, 2nd Ed</em>
-<ul>
-<li><a href="https://z-library.sk/book/19241585/3d28cb/c%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80-%E7%AC%AC2%E7%89%88-%E6%96%B0%E7%89%88-%E5%85%B8%E8%97%8F%E7%89%88.html"><strong>中文版</strong></a> <a href="https://z-library.sk/book/674384/2f3843/c-programming-language-2nd-edition.html"><strong>英文版</strong></a> <a href="https://z-library.sk/book/3618764/def4c3/the-c-answer-book.html"><strong>书本答案</strong></a></li>
-</ul>
-</li>
-<li><em>C How to Program, 8th Ed</em>
-<ul>
-<li><a href="https://z-library.sk/book/116725701/94d8c7/c%E8%AF%AD%E8%A8%80%E5%A4%A7%E5%AD%A6%E6%95%99%E7%A8%8B-%E7%AC%AC8%E7%89%88.html"><strong>中文版</strong></a> <a href="https://www.kufunda.net/publicdocs/C%20How%20to%20Program.%20%20With%20an%20Introduction%20to%20C++%20(Paul%20Deitel,%20Harvey%20Deitel).pdf"><strong>英文版</strong></a></li>
-</ul>
-</li>
-<li><em>Havard CS50</em>
-<ul>
-<li><a href="https://cs50.harvard.edu/x/"><strong>课程网站</strong></a></li>
-</ul>
-</li>
-<li><a href="https://leetcode.cn/studyplan/programming-skills/"><strong>Leetcode - 编程基础 0 到 1</strong></a>：用C语言过完一遍，基础就差不多可以了</li>
-<li><a href="https://pintia.cn/problem-sets/994805260223102976/exam/problems/type/7"><strong>PAT (Basic Level) Practice</strong></a>：用C语言试试写前三十道题，难度稍微高一些</li>
+<li><em>The Linux Command Line: A Complete Introduction, 2nd Ed</em>: <a href="https://z-library.sk/book/29356342/249bc8/linux%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%A4%A7%E5%85%A8%E7%AC%AC2%E7%89%88.html">中文版</a>, <a href="https://z-library.sk/book/3704056/b964c2/the-linux-command-line-a-complete-introduction-2nd-edition.html">英文版</a></li>
+<li><em>C Programming Language, 2nd Ed</em>: <a href="https://z-library.sk/book/19241585/3d28cb/c%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80-%E7%AC%AC2%E7%89%88-%E6%96%B0%E7%89%88-%E5%85%B8%E8%97%8F%E7%89%88.html">中文版</a>, <a href="https://z-library.sk/book/674384/2f3843/c-programming-language-2nd-edition.html">英文版</a>, <a href="https://z-library.sk/book/3618764/def4c3/the-c-answer-book.html">书本答案</a></li>
+<li><em>C How to Program, 8th Ed</em>: <a href="https://z-library.sk/book/116725701/94d8c7/c%E8%AF%AD%E8%A8%80%E5%A4%A7%E5%AD%A6%E6%95%99%E7%A8%8B-%E7%AC%AC8%E7%89%88.html">中文版</a>, <a href="https://www.kufunda.net/publicdocs/C%20How%20to%20Program.%20%20With%20an%20Introduction%20to%20C++%20(Paul%20Deitel,%20Harvey%20Deitel).pdf">英文版</a></li>
+<li><em>Havard CS50</em>: <a href="https://cs50.harvard.edu/x/">课程网站</a></li>
+<li><a href="https://leetcode.cn/studyplan/programming-skills/">Leetcode - 编程基础 0 到 1</a>：用C语言过完一遍，基础就差不多可以了</li>
+<li><a href="https://pintia.cn/problem-sets/994805260223102976/exam/problems/type/7">PAT (Basic Level) Practice</a>：用C语言试试写前三十道题，难度稍微高一些</li>
 </ul>
 <h2 id="3-contributed-learning-tips-学习方法投稿"><a class="header" href="#3-contributed-learning-tips-学习方法投稿">3. Contributed Learning Tips 学习方法投稿</a></h2>
 <ul>
@@ -268,6 +252,22 @@
 
         </div>
 
+        <!-- Livereload script (if served using the cli tool) -->
+        <script>
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
 
 
 

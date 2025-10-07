@@ -9,8 +9,8 @@
 ## 2. Recomanded Resources 推荐资源
 
 -   *Computer Systems: A Programmer’s Perspective, Third Edition (CSAPP)*
-    -   [课程官网](https://csapp.cs.cmu.edu) [配套资源](https://csapp.cs.cmu.edu)
-    -   [中文版](https://z-library.sk/book/28525133/62ea78/深入理解计算机系统.html) [社区翻译版](https://hansimov.gitbook.io/csapp) [英文版](https://z-library.sk/book/19191715/956b43/computer-systems-a-programmers-perspective-third-edition-global-edition.html) 
+    -   [课程官网](https://csapp.cs.cmu.edu), [配套资源](https://csapp.cs.cmu.edu), [Instructor’s Solution Manual](https://z-library.sk/book/21129182/7eb230/computer-systems-a-programmers-perspective-third-edition-instructors-solution-manual.html?dsource=recommend)
+    -   [中文版](https://z-library.sk/book/28525133/62ea78/深入理解计算机系统.html), [社区翻译版](https://hansimov.gitbook.io/csapp), [英文版](https://z-library.sk/book/19191715/956b43/computer-systems-a-programmers-perspective-third-edition-global-edition.html) 
 
 ## 3. Contributed Learning Tips 学习方法投稿
 

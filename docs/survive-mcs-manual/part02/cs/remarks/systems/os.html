@@ -185,8 +185,8 @@
 <ul>
 <li><em>Computer Systems: A Programmer’s Perspective, Third Edition (CSAPP)</em>
 <ul>
-<li><a href="https://csapp.cs.cmu.edu">课程官网</a> <a href="https://csapp.cs.cmu.edu">配套资源</a></li>
-<li><a href="https://z-library.sk/book/28525133/62ea78/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F.html">中文版</a> <a href="https://hansimov.gitbook.io/csapp">社区翻译版</a> <a href="https://z-library.sk/book/19191715/956b43/computer-systems-a-programmers-perspective-third-edition-global-edition.html">英文版</a></li>
+<li><a href="https://csapp.cs.cmu.edu">课程官网</a>, <a href="https://csapp.cs.cmu.edu">配套资源</a>, <a href="https://z-library.sk/book/21129182/7eb230/computer-systems-a-programmers-perspective-third-edition-instructors-solution-manual.html?dsource=recommend">Instructor’s Solution Manual</a></li>
+<li><a href="https://z-library.sk/book/28525133/62ea78/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F.html">中文版</a>, <a href="https://hansimov.gitbook.io/csapp">社区翻译版</a>, <a href="https://z-library.sk/book/19191715/956b43/computer-systems-a-programmers-perspective-third-edition-global-edition.html">英文版</a></li>
 </ul>
 </li>
 </ul>
@@ -249,6 +249,22 @@
 
         </div>
 
+        <!-- Livereload script (if served using the cli tool) -->
+        <script>
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
 
 
 
