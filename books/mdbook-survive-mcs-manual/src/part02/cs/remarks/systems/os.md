@@ -11,6 +11,9 @@
 -   *Computer Systems: A Programmer’s Perspective, Third Edition (CSAPP)*
     -   [课程官网](https://csapp.cs.cmu.edu), [配套资源](https://csapp.cs.cmu.edu), [Instructor’s Solution Manual](https://z-library.sk/book/21129182/7eb230/computer-systems-a-programmers-perspective-third-edition-instructors-solution-manual.html?dsource=recommend)
     -   [中文版](https://z-library.sk/book/28525133/62ea78/深入理解计算机系统.html), [社区翻译版](https://hansimov.gitbook.io/csapp), [英文版](https://z-library.sk/book/19191715/956b43/computer-systems-a-programmers-perspective-third-edition-global-edition.html) 
+-   *Operating Systems: Three Easy Pieces (OSTEP)*
+    -   [官方网站](https://pages.cs.wisc.edu/~remzi/OSTEP/)
+    -   [英文版](https://z-library.sk/book/27940717/e6494d/operating-systems-three-easy-pieces.html), [中文版](https://z-library.sk/book/27371374/a01f18/操作系统导论.html)
 
 ## 3. Contributed Learning Tips 学习方法投稿
 
