@@ -14,6 +14,7 @@
 -   [城南讲马堂 - Linear Algebra [Hoffman & Kunze] (2ed) Solutions](https://christangdt.home.blog/algebra/linear-algebra-hoffman-kunze-2ed/)
 -   [Linear Algebra Done Right, 4th Ed.](https://linear.axler.net)
     -   [英文版](https://linear.axler.net/LADR4e.pdf) [中文版](https://linear.axler.net/LADR4eChinese.pdf)
+-   [AlgebraB Lecture notes, Mariano Suárez-Álvarez, 2024 Spring (June 12)](https://drive.google.com/file/d/1ys6rSq_WhaOSkKIV0tSrofJ4qBFwd9qy/view?usp=share_link)
 
 ## 3. Contributed Learning Tips 学习方法投稿
 
