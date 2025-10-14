@@ -13,6 +13,7 @@
     -   [Ordinal Differential Equations - International](https://panopto.gtiit.edu.cn/Panopto/Pages/Sessions/List.aspx#folderID=%2241f4b499-b01a-405d-a935-ab8d00534ef3%22&view=1&folderQuery=%22Ordinary%22&sortColumn=0&sortAscending=true&maxResults=250)
 -   [Bilibili - 淅沥f80](https://space.bilibili.com/14767534)
     -   [常微分方程ODE新版](https://www.bilibili.com/video/BV1tCPpe2E7E/?spm_id_from=333.1387.collection.video_card.click&vd_source=88e406ed8318b91bf6d28fda3ed7be52)
+-   [Ordinary Differential Equations Lecture Notes (Mariano Suárez-Álvarez)](https://mate.dm.uba.ar/~aldoc9/Publicaciones/Notas/ode-a.pdf)
 
 ## 3. Contributed Learning Tips 学习方法投稿
 
