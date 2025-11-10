@@ -66,3 +66,4 @@
     - [2025.6.7 升研升博指导会](./part03/career-lectures/2025-6-7-apply.html)
     - [2025数学系升学去向](./part03/career-lectures/2025-mcs-outcome.html)
     - [2025.3.6 雅思讲座会议笔记](./part03/career-lectures/2025-3-6-IELTS.html)
+    - [20MCS刘小奇分享](./part03/20mcs-lxq.md)

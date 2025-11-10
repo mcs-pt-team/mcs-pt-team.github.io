@@ -17,3 +17,11 @@
 -   **Pure Math**
     -   [Introduction to Group Theory](https://panopto.gtiit.edu.cn/Panopto/Pages/Sessions/List.aspx#folderID=%22b767a905-955f-4278-9c99-ab8d00c977de%22)
     -   [Set Theory - Tutorial - 20 Winter](https://panopto.gtiit.edu.cn/Panopto/Pages/Sessions/List.aspx#folderID=%228d0edca9-252d-4852-af54-ac4e00b26b99%22&maxResults=250)
+
+
+
+## 2. Extra
+
+-   [Github: awesome-math](https://github.com/rossant/awesome-math)
+
+    >   收集了数学各个知识的优质学习资源，涵盖代数、几何、分析、概率统计、数论等 30 多个领域。同时提供多种学习方式，比如视频教程、电子教材，以及练习工具等，甚至还有 MIT、哈弗等名校学生的课程笔记。 所有资源都经过精心筛选，目前还在持续更新当中，想自学数学的同学，这份资料值得收藏一下。

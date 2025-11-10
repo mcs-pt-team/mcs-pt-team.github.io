@@ -1,0 +1,429 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>20MCS刘小奇分享 - survive-mcs-manual</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+            window.path_to_searchindex_js = "../searchindex.js";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+                sidebar_toggle.checked = false;
+            }
+            if (sidebar === 'visible') {
+                sidebar_toggle.checked = true;
+            } else {
+                html.classList.remove('sidebar-visible');
+            }
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">survive-mcs-manual</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <div class="search-wrapper">
+                            <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                            <div class="spinner-wrapper">
+                                <i class="fa fa-spinner fa-spin"></i>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="20mcs刘小奇分享-美国cs硕士直博专题"><a class="header" href="#20mcs刘小奇分享-美国cs硕士直博专题">20MCS刘小奇分享: 美国CS硕士+直博专题</a></h1>
+<h2 id="1-个人信息"><a class="header" href="#1-个人信息">1. 个人信息：</a></h2>
+<ul>
+<li>
+<p>👤 <strong>个人主页</strong></p>
+<ul>
+<li><a href="https://chillingliu.github.io">https://chillingliu.github.io</a></li>
+</ul>
+</li>
+<li>
+<p>📒 <strong>申请时背景</strong></p>
+<ul>
+<li>GPA: 85.8</li>
+<li>多段科研经历（一篇Q2一作、一篇Q1三作）</li>
+<li>两封强推</li>
+</ul>
+</li>
+<li>
+<p>✅ <strong>录取</strong></p>
+<ul>
+<li>PhD
+<ul>
+<li>伊利诺伊大学芝加哥（CS）</li>
+</ul>
+</li>
+<li>硕士
+<ul>
+<li>南加州大学（CS、DS、Cybersecurity三个offer）</li>
+<li>约翰霍普金斯大学（CS转录Security Informatics）</li>
+<li>乔治城大学（CS）</li>
+<li>威斯康辛大学麦迪逊（Information）。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>❌ <strong>拒绝</strong></p>
+<ul>
+<li>PhD
+<ul>
+<li>纽约州立大学石溪（CS）</li>
+<li>UMass Amherst (CS)</li>
+<li>弗吉尼亚理工 (CS)</li>
+<li>沙特国王科技大学 (CS)，</li>
+</ul>
+</li>
+<li>硕士
+<ul>
+<li>多伦多大学（Applied Computing）</li>
+<li>密歇根大学（Health Data Science）</li>
+<li>UIUC（Information Management）</li>
+<li>弗吉尼亚大学（CS）</li>
+<li>昆山杜克（ECE）</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="2-回过头来看后悔可以提升的"><a class="header" href="#2-回过头来看后悔可以提升的">2. 回过头来看后悔/可以提升的：</a></h2>
+<ul>
+<li>
+<p><strong>雅思准备得太晚了</strong>：我本来打算申请前的暑假考出雅思，但是由于暑假做了UTA、PM，外加当时正在写论文，算是国庆节才考了第一次雅思，之后又在10月和11月间刷了几遍，但时间还是太紧张了。</p>
+</li>
+<li>
+<p><strong>选校+项目有很多和自己背景不匹配的</strong>：最开始我报中介的目的就是想让他们给我推荐一些好学校的低门槛项目，比如Health Data Science, Information Management, Applied Computing等，但是直到后来我申请结束后才发现这些专业即便录取了，我也不想去上。说不定也正是因为我的背景（科研多但没有实习+密码学方向论文一作）与项目不匹配才导致被拒。建议同学们申请项目前先想好录取了之后到底想不想去，再决定是否申请。</p>
+</li>
+<li>
+<p><strong>可以再多申几个学校</strong>：最开始因为只想申硕士，所以跟中介签的合同是12个项目，而且因为每个项目都需要推荐人一个一个地提交推荐信，所以我也不想太麻烦推荐老师。最后我硕博混申，一共申了16个，感觉也挺多的，但是一问别人，基本都是20个左右，相比之下还是申少了。</p>
+</li>
+</ul>
+<h2 id="3-要不要报中介"><a class="header" href="#3-要不要报中介">3. 要不要报中介：</a></h2>
+<ul>
+<li>
+<p>我认为这是仁者见仁智者见智了，对我来说报中介的本质就是<strong>花钱买服务</strong>。</p>
+</li>
+<li>
+<p><strong>申请结果与中介的关系</strong>：我认为不是特别大，申请结果往往是由我们的GPA、科研、推荐信决定的，文书只起到锦上添花的作用（但是也不能不重视，如果别人的文书都很好，自己的不好就是一大弱点）。如果你找中介的时候这三项都已经具备了，那中介基本上帮不了你什么了。但如果你找中介比较早，并且自己没有科研和推荐信，中介还能帮你找找校外科研，丰富一下简历。</p>
+</li>
+<li>
+<p><strong>中介主要起到一个利用信息差的作用</strong>：也就是根据他们过往的学生经验，给你推荐好学校的低门槛项目。</p>
+</li>
+</ul>
+<h2 id="4-cvps等文书建议"><a class="header" href="#4-cvps等文书建议">4. CV、PS等文书建议：</a></h2>
+<ul>
+<li>
+<p><strong>不要完全相信中介的文书修改能力</strong>，大家可以在BOSS直聘等网站查询到很多留学机构招的文书老师都是大专/本科的英语专业，他们的英语水平或者使用AI润色的熟练程度不一定比大家好。</p>
+</li>
+<li>
+<p><strong>多修改几次</strong>：可能是因为有中介，我的CV和PS都修改了10多次，每个地方的遣词造句都仔细推敲过。直到最后你看着自己的CV/PS像在看一件艺术品一样，就足够了。</p>
+</li>
+<li>
+<p><strong>PS的主要idea就是成长</strong>：比起一个本身完美的人，美国学校可能更喜欢那些最开始不完美、通过一步步努力而走向成功的人，所以我的PS就以“积极实施某件事情 -&gt; 努力但是失败了 -&gt; 自己或者他人帮助下发现原因 -&gt; 努力最后成功”为基调。</p>
+</li>
+<li>
+<p><del><strong>强烈建议上陈芬老师的Career Design课程</strong>，她会带着大家了解并完成CV和PS的初稿。这门课的大一大二和大三大四是分开的（大一大二专注寻找自己的兴趣、大三大四专注申研就业），我大一大二报过这门课，不过大四的时候还是去旁听了。</del></p>
+</li>
+</ul>
+<h2 id="5-美国cs硕士申请建议"><a class="header" href="#5-美国cs硕士申请建议">5. 美国CS硕士申请建议：</a></h2>
+<ul>
+<li>
+<p>在 <a href="https://mcs-pt-team.github.io/survive-mcs-manual/part03/apply-career.html">https://mcs-pt-team.github.io/survive-mcs-manual/part03/apply-career.html</a> 这里我们主要讲了学校&amp;项目的申请难度，如果想了解更多，可以从 <a href="https://opencs.app/">https://opencs.app/</a> OpenCS的Datapoints里找到其他国内同学的申请结果。</p>
+</li>
+<li>
+<p><strong>地理位置也非常重要</strong>：我所在的UIC位于芝加哥的市区，离市中心很近，学校里经常会有招聘会，来的也都是芝加哥本地的大小企业，但是因为芝加哥没有很多互联网大厂，所以CS相关的岗位不是很多。可想而知，如果你在洛杉矶的某个学校，即便学校名次不是特别靠前，也说不定能利用校招会更容易找到CS岗位的工作、进入大企业。（如果有目标企业，也可以通过领英，找到该企业的employees都是从哪里毕业的，来辅助选校。）</p>
+</li>
+<li>
+<p><strong>等待放榜</strong>：可以从 <a href="https://www.thegradcafe.com/">https://www.thegradcafe.com/</a> GradCafe和 <a href="https://www.1point3acres.com/en">https://www.1point3acres.com/en</a> 一亩三分地实时看到别人的录取。</p>
+</li>
+</ul>
+<h3 id="51-要不要直博"><a class="header" href="#51-要不要直博">5.1. 要不要直博：</a></h3>
+<ul>
+<li>
+<p>最开始我是不想直博的，因为美国博士的难度要比硕士高好多，能申上的博士学校一般都要比硕士学校低好几个档次了。所以我最开始想的是先上硕士，在硕士期间找教授无偿干活（和在广以一样），然后再多出一两篇论文，并且在研究生期间拿较高的GPA，弥补一下本科没那么高的GPA，这样就能在申博时拿到更好的offer。运气如果特别好的话，可以跟着研究生期间的导师继续读博，运气没那么好的话，也能申到比直博高一个档次的学校。事实证明，不少18届的学长都通过这个方式实现了留本校读博或申上更好的博士项目。</p>
+</li>
+<li>
+<p>直博不一定会省很多时间（比如你6年毕业，先读硕的同学2+5毕业），但是一定能省很多钱！根据城市的不同，美国两年硕士期间要花120-150万不等，因为我家也不是特别富裕，综合考虑下来还是选择直博。如果你家比较富裕的话，还是推荐先硕再博的。</p>
+</li>
+<li>
+<p>大多数CS美博只有一年签证，所以可能要做好5年不回国的打算。能不能接受这个，也是一个很大的决定因素吧。</p>
+</li>
+</ul>
+<h3 id="52-我在uic目前的所见所闻"><a class="header" href="#52-我在uic目前的所见所闻">5.2. 我在UIC目前的所见所闻：</a></h3>
+<ul>
+<li>
+<p><strong>25Fall PhD缩招确实很严重</strong>，即便是CS这种相对经费很多的专业也缩招了很多。UIC CS系在csranking中有54位教授，往年每年会招50-60个PhD，但是今年只招了30出头。</p>
+</li>
+<li>
+<p>可能因为学校是大公立，遇到的CS PhD中国人中大多数都是国内的硕士，少部分是美硕和国内本科直博。国内来的大多数学校是中上游985，比如浙大、中科院、山大、川大、同济、西交等，此外还有大连理工、东北大学等；美硕的大多数是Top20，比如哥大、JHU等；还有少部分的海本，比如港科、新加坡国立、日本筑波大学等。大多数博一同学年龄在22-28不等，也不用有年龄焦虑。</p>
+</li>
+<li>
+<p><strong>Technion的认可度还是非常高的，至少在CS领域，尤其是密码学，Technion算是非常有名了</strong>。我和学校的其他老师聊到Technion，他说在密码学的顶会CRYPTO、EuroCRYPTO里，好多都是以色列人。当然，我们是广以，不是正统Technion，所以认可度还是要打上折扣的。</p>
+</li>
+<li>
+<p>PhD科研还是要靠自己，很多读完硕来这里的同学都告诉我：<strong>PhD最重要的不是学校排名，也不是导师影响力，而是一个nice的导师，加上舒适的城市和稍微宽裕些的工资</strong>。毕竟CS领域的顶会都是双盲制度的，即审稿人看不到投稿人的导师和所属学校，所以导师声誉在投顶会上帮助没有那么大。（但是其他专业投期刊就另当别论了）</p>
+</li>
+<li>
+<p>PhD的工资是肯定足够一个人正常生活的，UIC的工资是税前3.2k/月，税后2.7k，芝加哥开销虽然比大农村高一些，但是比纽约洛杉矶还是低不少的。我合租的房子2b2b离学校很近，所以偏贵些每人每月1250，在吃穿方面，如果你像我一样都自己做饭的话，每个月甚至能剩4-500。</p>
+</li>
+<li>
+<p><strong>美国学校GPA比广以好拿好多倍，虽然很多课教的很难，但是给分真的很松</strong>。很多课的A率都有40-50%（广以考试85才算A），挂科率更是非常低了，这也解释了为什么申请时广以85.8转成3.5在一众3.7、3.8的GPA里显得特别低了。最开始我以为是UIC在美国排名不算高，才导致这种情况，后来跟我同门JHU硕的同学聊了，发现都是这样：<strong>在美国，A率不到50%的课都不是好课</strong>。</p>
+</li>
+<li>
+<p>在广以时，我认为数学太难了，特别不喜欢数学，就想早点毕业去读CS，所以选了密码学这个应用数学的方向。但是做了大半年密码学科研后，我感觉密码学也太难了，所以申博时就选择了应用密码学、网络安全的方向。但现在着手做了之后，我发现应用密码学的科研也不好做。所以我认为，<strong>只要不是实验导向的科研，理论导向的科研都挺难做的</strong>。不过CS的好处就是课程基本上都是开卷考试或大作业，再也不用像在数学课程中一样为考试担心焦虑了。</p>
+</li>
+</ul>
+<h2 id="6-美国cs博士申请建议"><a class="header" href="#6-美国cs博士申请建议">6. 美国CS博士申请建议：</a></h2>
+<ul>
+<li>
+<p>申博GPA、科研经历、论文都比较重要，但是我觉得最重要的还是<strong>推荐信</strong>！从导师的角度考虑，他当然想找一个厉害的学生，但是他更想找一个好沟通、合得来的学生。所以这时候推荐信的作用就体现出来了，你的推荐人需要花大篇幅描写你们怎么认识的，通过具体的事件描写你的工作能力、性格如何，有没有团队合作的能力。一般我们认为写满两页及以上的推荐信才算强推，而我认为申博在3封推荐信里至少需要两封强推。</p>
+</li>
+<li>
+<p>如果你是想申请CS博，最好创建一个<strong>个人主页</strong>。一方面是大多数CS博申请人都有个人主页，另一方面是这个在套辞时也能让老师更了解你一些。CV里毕竟只能写两页，很多经历大家都是简写的，而在个人主页里就没有这个顾虑了，你可以把自己在大学间的所有经历都写上，最好图文都有，要不然也太枯燥了。这里附上我的作为参考：<a href="https://chillingliu.github.io">https://chillingliu.github.io</a></p>
+</li>
+<li>
+<p>早套辞、多套辞（申博最麻烦和花时间的点就在这）。我的套辞流程如下：先选好你的方向，然后在csranking上筛选你的方向的顶会，就能找到每个学校做这个方向的导师列表。进到他们个人主页里，如果有写“I’m recruiting some PhD students in 25Fall”就留下，接着看他的博士生团队，如果团队里有中国人，就在google搜索“这个中国人的名字+学校”，基本上能搜到他的个人主页，如果发现该导师的中国人团队都来自清北华五，就去掉，反之留下。这样你就有了一个目标导师列表，然后对每个导师：着重看两篇他的近两年一作/通讯论文，再根据你看的论文提出你对该论文的想法，然后说自己也想做这个方向，附上自己的CV和个人主页发出套辞信。</p>
+</li>
+</ul>
+<h3 id="61-选学校"><a class="header" href="#61-选学校">6.1. 选学校：</a></h3>
+<ul>
+<li>
+<p>因为我只有一个博士offer，所以也没啥好选的。但是假如你有好几个offer，就像上面说的一样：PhD最重要的不是学校排名，也不是导师影响力，而是一个nice的导师，加上舒适的城市和稍微宽裕些的工资。导师nice不nice大家可以通过面试和他/她的email往来判断出来，工资大家可以在 <a href="https://csstipendrankings.org">https://csstipendrankings.org</a> 这里看（不一定准，以同校的学长学姐工资为准）。</p>
+</li>
+<li>
+<p>学校所在城市一般分为大城市和大农村。如果你在广以这么长时间从没感觉到无聊，去美国大农村甚至还能更开心一些，因为美国学校会有很多活动。如果你在广以感觉比较无聊，而且经常打车去市里玩，我还是推荐大城市的，因为美国的公共交通没有国内方便，打车又非常贵，所以待在大农村5年可能还是比较无聊的。</p>
+</li>
+<li>
+<p>UIC的工资在大公立里确实不算低，考虑到芝加哥的生活成本相对较低，生活还是挺好的。外加UIC的地理位置比较好，也不会太无聊，所以如果能拿到offer的话，我还是挺推荐大家来的。</p>
+</li>
+</ul>
+<h2 id="7-其他有用的资源"><a class="header" href="#7-其他有用的资源">7. 其他有用的资源：</a></h2>
+<ul>
+<li>排名：
+<ul>
+<li>Brown placement ranking：<a href="https://drafty.cs.brown.edu/csopenrankings/">https://drafty.cs.brown.edu/csopenrankings/</a></li>
+<li>美国教授们毕业院校汇总：<a href="https://drafty.cs.brown.edu/csprofessors?src=csor_placementrank">https://drafty.cs.brown.edu/csprofessors?src=csor_placementrank</a></li>
+</ul>
+</li>
+<li>面试：
+<ul>
+<li>和Yifan聊科研的个人空间: <a href="https://space.bilibili.com/1914889792?spm_id_from=333.337.search-card.all.click">https://space.bilibili.com/1914889792?spm_id_from=333.337.search-card.all.click</a></li>
+</ul>
+</li>
+<li>知乎：
+<ul>
+<li>各种资源汇总：<a href="https://zhuanlan.zhihu.com/p/22584081346">https://zhuanlan.zhihu.com/p/22584081346</a></li>
+<li>25 Fall USC MSCS 留美攻略 + 生活分享: <a href="https://zhuanlan.zhihu.com/p/1950442189235685289">https://zhuanlan.zhihu.com/p/1950442189235685289</a></li>
+</ul>
+</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../part03/career-lectures/2025-3-6-IELTS.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../part03/career-lectures/2025-3-6-IELTS.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+            </nav>
+
+        </div>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        <script>
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+
+    </div>
+    </body>
+</html>
