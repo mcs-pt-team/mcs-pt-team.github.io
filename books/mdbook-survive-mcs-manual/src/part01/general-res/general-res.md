@@ -4,7 +4,6 @@
 
 -   [GTIIT校园网VPN设置](https://servicehub.gtiit.edu.cn/help/en-us/8/246)
 -   [GTIIT校园网进阶配置教程](./gtiit-vpn-setup.md)
-
 -   其他VPN（询问PT）
 
 ## 2. Latex

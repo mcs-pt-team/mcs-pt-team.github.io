@@ -7,7 +7,7 @@
 -   [2025.6.7 升研升博指导会](./career-lectures/2025-6-7-apply.html)
 -   [2025数学系升学去向](./career-lectures/2025-mcs-outcome.html)
 -   [2025.3.6 雅思讲座会议笔记](./career-lectures/2025-3-6-IELTS.html)
--   [20MCS刘小奇分享](./career-lectures/20mcs-lxq.md)
+-   [20MCS刘小奇分享](./career-lectures/20mcs-lxq.html)
 
 ## 1. 几大排名侧重点
 
